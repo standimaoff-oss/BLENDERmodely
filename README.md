@@ -13,6 +13,8 @@ with eight servo limbs — the «Octo Arms» rig this mod is named after.
 
 ## Getting the jar
 
+* **In this repo**: `jar/octoarms-1.0.0-mc1.20.1-forge47.2.0.jar` — CI keeps it
+  up to date on every successful build.
 * **Releases**: the `latest-build` GitHub release always carries the freshest
   compiled jar (`octoarms-<version>-mc1.20.1-forge47.2.0.jar`).
 * **Actions**: every push builds the mod; download `octoarms-jar` from the run.
