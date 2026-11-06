@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:water",
+    "minecraft:lava",
+    "minecraft:bubble_column",
+    "minecraft:cobweb",
+    "minecraft:powder_snow",
+    "minecraft:magma_block",
+    "minecraft:cactus",
+    "minecraft:sweet_berry_bush",
+    "minecraft:fire",
+    "minecraft:soul_fire"
+  ]
+}

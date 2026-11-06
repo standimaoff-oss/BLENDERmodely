@@ -1,0 +1,38 @@
+{
+  "type": "octoarms:assembly",
+  "ingredients": [
+    {
+      "item": "minecraft:netherite_leggings",
+      "count": 1
+    },
+    {
+      "item": "octoarms:netherite_plate",
+      "count": 17
+    },
+    {
+      "item": "octoarms:netherite_gear",
+      "count": 4
+    },
+    {
+      "item": "octoarms:heavy_actuator",
+      "count": 4
+    },
+    {
+      "item": "octoarms:advanced_circuit",
+      "count": 3
+    },
+    {
+      "item": "octoarms:nether_power_core",
+      "count": 1
+    },
+    {
+      "item": "octoarms:obsidian_plate",
+      "count": 3
+    }
+  ],
+  "result": {
+    "item": "octoarms:netherite_mech_leggings",
+    "count": 1
+  },
+  "energy": 70000
+}

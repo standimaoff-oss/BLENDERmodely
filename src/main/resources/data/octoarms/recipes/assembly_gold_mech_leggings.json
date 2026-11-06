@@ -1,0 +1,34 @@
+{
+  "type": "octoarms:assembly",
+  "ingredients": [
+    {
+      "item": "minecraft:golden_leggings",
+      "count": 1
+    },
+    {
+      "item": "octoarms:gold_plate",
+      "count": 6
+    },
+    {
+      "item": "octoarms:copper_gear",
+      "count": 2
+    },
+    {
+      "item": "octoarms:thruster_module",
+      "count": 2
+    },
+    {
+      "item": "octoarms:advanced_circuit",
+      "count": 1
+    },
+    {
+      "item": "octoarms:power_core",
+      "count": 1
+    }
+  ],
+  "result": {
+    "item": "octoarms:gold_mech_leggings",
+    "count": 1
+  },
+  "energy": 24000
+}

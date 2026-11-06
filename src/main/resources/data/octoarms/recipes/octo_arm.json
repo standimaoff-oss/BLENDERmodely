@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SHS",
+    "AMA",
+    "SCS"
+  ],
+  "key": {
+    "S": {
+      "item": "octoarms:silk_mesh"
+    },
+    "H": {
+      "item": "octoarms:heavy_actuator"
+    },
+    "A": {
+      "item": "octoarms:actuator"
+    },
+    "M": {
+      "item": "octoarms:advanced_circuit"
+    },
+    "C": {
+      "item": "octoarms:netherite_plate"
+    }
+  },
+  "result": {
+    "item": "octoarms:octo_arm",
+    "count": 1
+  }
+}

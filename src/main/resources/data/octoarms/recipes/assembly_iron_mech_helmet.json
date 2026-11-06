@@ -1,0 +1,30 @@
+{
+  "type": "octoarms:assembly",
+  "ingredients": [
+    {
+      "item": "minecraft:iron_helmet",
+      "count": 1
+    },
+    {
+      "item": "octoarms:iron_plate",
+      "count": 3
+    },
+    {
+      "item": "octoarms:iron_gear",
+      "count": 1
+    },
+    {
+      "item": "octoarms:actuator",
+      "count": 2
+    },
+    {
+      "item": "octoarms:circuit_board",
+      "count": 1
+    }
+  ],
+  "result": {
+    "item": "octoarms:iron_mech_helmet",
+    "count": 1
+  },
+  "energy": 12000
+}

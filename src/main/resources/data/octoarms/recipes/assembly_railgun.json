@@ -1,0 +1,30 @@
+{
+  "type": "octoarms:assembly",
+  "ingredients": [
+    {
+      "item": "octoarms:heavy_slug",
+      "count": 3
+    },
+    {
+      "item": "octoarms:advanced_circuit",
+      "count": 2
+    },
+    {
+      "item": "octoarms:nether_power_core",
+      "count": 1
+    },
+    {
+      "item": "octoarms:heavy_actuator",
+      "count": 2
+    },
+    {
+      "item": "octoarms:obsidian_plate",
+      "count": 2
+    }
+  ],
+  "result": {
+    "item": "octoarms:railgun",
+    "count": 1
+  },
+  "energy": 70000
+}

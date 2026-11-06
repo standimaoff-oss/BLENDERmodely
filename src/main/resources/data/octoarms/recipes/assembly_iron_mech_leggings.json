@@ -1,0 +1,34 @@
+{
+  "type": "octoarms:assembly",
+  "ingredients": [
+    {
+      "item": "minecraft:iron_leggings",
+      "count": 1
+    },
+    {
+      "item": "octoarms:iron_plate",
+      "count": 5
+    },
+    {
+      "item": "octoarms:iron_gear",
+      "count": 2
+    },
+    {
+      "item": "octoarms:actuator",
+      "count": 2
+    },
+    {
+      "item": "octoarms:circuit_board",
+      "count": 1
+    },
+    {
+      "item": "octoarms:power_core",
+      "count": 1
+    }
+  ],
+  "result": {
+    "item": "octoarms:iron_mech_leggings",
+    "count": 1
+  },
+  "energy": 20000
+}

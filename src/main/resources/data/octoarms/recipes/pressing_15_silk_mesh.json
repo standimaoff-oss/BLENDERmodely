@@ -1,0 +1,18 @@
+{
+  "type": "octoarms:pressing",
+  "ingredients": [
+    {
+      "item": "minecraft:string",
+      "count": 4
+    },
+    {
+      "item": "minecraft:slime_ball",
+      "count": 1
+    }
+  ],
+  "result": {
+    "item": "octoarms:silk_mesh",
+    "count": 1
+  },
+  "process_time": 140
+}

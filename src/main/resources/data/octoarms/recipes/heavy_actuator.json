@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "APA",
+    "PHP",
+    "APA"
+  ],
+  "key": {
+    "A": {
+      "item": "octoarms:actuator"
+    },
+    "P": {
+      "item": "octoarms:iron_plate"
+    },
+    "H": {
+      "item": "octoarms:hydraulic_piston"
+    }
+  },
+  "result": {
+    "item": "octoarms:heavy_actuator",
+    "count": 1
+  }
+}

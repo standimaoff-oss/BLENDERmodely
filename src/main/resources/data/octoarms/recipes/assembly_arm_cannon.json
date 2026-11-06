@@ -1,0 +1,30 @@
+{
+  "type": "octoarms:assembly",
+  "ingredients": [
+    {
+      "item": "octoarms:iron_plate",
+      "count": 3
+    },
+    {
+      "item": "octoarms:power_core",
+      "count": 1
+    },
+    {
+      "item": "octoarms:energy_orb",
+      "count": 2
+    },
+    {
+      "item": "octoarms:circuit_board",
+      "count": 1
+    },
+    {
+      "item": "octoarms:actuator",
+      "count": 2
+    }
+  ],
+  "result": {
+    "item": "octoarms:arm_cannon",
+    "count": 1
+  },
+  "energy": 20000
+}

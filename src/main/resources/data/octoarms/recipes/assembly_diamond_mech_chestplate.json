@@ -1,0 +1,42 @@
+{
+  "type": "octoarms:assembly",
+  "ingredients": [
+    {
+      "item": "minecraft:diamond_chestplate",
+      "count": 1
+    },
+    {
+      "item": "octoarms:diamond_plate",
+      "count": 12
+    },
+    {
+      "item": "octoarms:diamond_gear",
+      "count": 4
+    },
+    {
+      "item": "octoarms:heavy_actuator",
+      "count": 6
+    },
+    {
+      "item": "octoarms:advanced_circuit",
+      "count": 2
+    },
+    {
+      "item": "octoarms:reinforced_frame",
+      "count": 2
+    },
+    {
+      "item": "octoarms:power_core",
+      "count": 2
+    },
+    {
+      "item": "octoarms:thruster_module",
+      "count": 2
+    }
+  ],
+  "result": {
+    "item": "octoarms:diamond_mech_chestplate",
+    "count": 1
+  },
+  "energy": 56000
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "top": "octoarms:block/charging_dock_top",
+    "bottom": "octoarms:block/charging_dock_bottom",
+    "side": "octoarms:block/charging_dock_side",
+    "front": "octoarms:block/charging_dock_front_active"
+  }
+}

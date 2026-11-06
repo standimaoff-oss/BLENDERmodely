@@ -1,0 +1,14 @@
+{
+  "type": "octoarms:pressing",
+  "ingredients": [
+    {
+      "item": "minecraft:diamond",
+      "count": 2
+    }
+  ],
+  "result": {
+    "item": "octoarms:diamond_gear",
+    "count": 1
+  },
+  "process_time": 220
+}

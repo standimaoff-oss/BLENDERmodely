@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PCP",
+    "GRG",
+    "PCP"
+  ],
+  "key": {
+    "P": {
+      "item": "octoarms:copper_plate"
+    },
+    "C": {
+      "item": "minecraft:copper_ingot"
+    },
+    "G": {
+      "item": "octoarms:copper_gear"
+    },
+    "R": {
+      "item": "minecraft:redstone_block"
+    }
+  },
+  "result": {
+    "item": "octoarms:power_cell",
+    "count": 1
+  }
+}

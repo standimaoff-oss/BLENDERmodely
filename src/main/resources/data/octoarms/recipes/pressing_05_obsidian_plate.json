@@ -1,0 +1,14 @@
+{
+  "type": "octoarms:pressing",
+  "ingredients": [
+    {
+      "item": "minecraft:obsidian",
+      "count": 1
+    }
+  ],
+  "result": {
+    "item": "octoarms:obsidian_plate",
+    "count": 1
+  },
+  "process_time": 200
+}

@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PNP",
+    "CRC",
+    "PNP"
+  ],
+  "key": {
+    "P": {
+      "item": "octoarms:netherite_plate"
+    },
+    "N": {
+      "item": "octoarms:nether_power_core"
+    },
+    "C": {
+      "item": "octoarms:advanced_power_cell"
+    },
+    "R": {
+      "item": "octoarms:reinforced_frame"
+    }
+  },
+  "result": {
+    "item": "octoarms:nether_power_cell",
+    "count": 1
+  }
+}

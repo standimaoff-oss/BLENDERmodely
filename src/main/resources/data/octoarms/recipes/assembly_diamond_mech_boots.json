@@ -1,0 +1,34 @@
+{
+  "type": "octoarms:assembly",
+  "ingredients": [
+    {
+      "item": "minecraft:diamond_boots",
+      "count": 1
+    },
+    {
+      "item": "octoarms:diamond_plate",
+      "count": 6
+    },
+    {
+      "item": "octoarms:diamond_gear",
+      "count": 2
+    },
+    {
+      "item": "octoarms:heavy_actuator",
+      "count": 4
+    },
+    {
+      "item": "octoarms:advanced_circuit",
+      "count": 2
+    },
+    {
+      "item": "octoarms:hydraulic_piston",
+      "count": 2
+    }
+  ],
+  "result": {
+    "item": "octoarms:diamond_mech_boots",
+    "count": 1
+  },
+  "energy": 28000
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " P ",
+    "BCB",
+    " P "
+  ],
+  "key": {
+    "P": {
+      "item": "octoarms:iron_plate"
+    },
+    "B": {
+      "item": "minecraft:blaze_powder"
+    },
+    "C": {
+      "item": "octoarms:copper_gear"
+    }
+  },
+  "result": {
+    "item": "octoarms:thruster_module",
+    "count": 1
+  }
+}

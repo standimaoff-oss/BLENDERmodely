@@ -1,0 +1,14 @@
+{
+  "type": "octoarms:pressing",
+  "ingredients": [
+    {
+      "item": "minecraft:netherite_ingot",
+      "count": 2
+    }
+  ],
+  "result": {
+    "item": "octoarms:netherite_gear",
+    "count": 1
+  },
+  "process_time": 320
+}

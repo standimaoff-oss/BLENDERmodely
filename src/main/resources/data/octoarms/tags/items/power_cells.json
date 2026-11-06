@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "octoarms:power_cell",
+    "octoarms:advanced_power_cell",
+    "octoarms:nether_power_cell"
+  ]
+}

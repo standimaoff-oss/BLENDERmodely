@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "top": "octoarms:block/hydraulic_press_top",
+    "bottom": "octoarms:block/hydraulic_press_bottom",
+    "side": "octoarms:block/hydraulic_press_side",
+    "front": "octoarms:block/hydraulic_press_front"
+  }
+}

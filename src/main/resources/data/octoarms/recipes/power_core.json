@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "IRI",
+    "RCR",
+    "IRI"
+  ],
+  "key": {
+    "I": {
+      "item": "octoarms:iron_plate"
+    },
+    "R": {
+      "item": "minecraft:redstone_block"
+    },
+    "C": {
+      "item": "octoarms:circuit_board"
+    }
+  },
+  "result": {
+    "item": "octoarms:power_core",
+    "count": 1
+  }
+}

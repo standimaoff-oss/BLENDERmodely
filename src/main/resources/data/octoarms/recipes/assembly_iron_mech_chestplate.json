@@ -1,0 +1,38 @@
+{
+  "type": "octoarms:assembly",
+  "ingredients": [
+    {
+      "item": "minecraft:iron_chestplate",
+      "count": 1
+    },
+    {
+      "item": "octoarms:iron_plate",
+      "count": 6
+    },
+    {
+      "item": "octoarms:iron_gear",
+      "count": 2
+    },
+    {
+      "item": "octoarms:actuator",
+      "count": 3
+    },
+    {
+      "item": "octoarms:circuit_board",
+      "count": 1
+    },
+    {
+      "item": "octoarms:reinforced_frame",
+      "count": 1
+    },
+    {
+      "item": "octoarms:power_core",
+      "count": 1
+    }
+  ],
+  "result": {
+    "item": "octoarms:iron_mech_chestplate",
+    "count": 1
+  },
+  "energy": 28000
+}

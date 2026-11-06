@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PGP",
+    "CIC",
+    "PGP"
+  ],
+  "key": {
+    "P": {
+      "item": "octoarms:gold_plate"
+    },
+    "G": {
+      "item": "minecraft:glowstone"
+    },
+    "C": {
+      "item": "octoarms:advanced_circuit"
+    },
+    "I": {
+      "item": "octoarms:power_cell"
+    }
+  },
+  "result": {
+    "item": "octoarms:advanced_power_cell",
+    "count": 1
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "values": [
+    "octoarms:copper_mech_helmet",
+    "octoarms:copper_mech_chestplate",
+    "octoarms:copper_mech_leggings",
+    "octoarms:copper_mech_boots",
+    "octoarms:iron_mech_helmet",
+    "octoarms:iron_mech_chestplate",
+    "octoarms:iron_mech_leggings",
+    "octoarms:iron_mech_boots",
+    "octoarms:gold_mech_helmet",
+    "octoarms:gold_mech_chestplate",
+    "octoarms:gold_mech_leggings",
+    "octoarms:gold_mech_boots",
+    "octoarms:diamond_mech_helmet",
+    "octoarms:diamond_mech_chestplate",
+    "octoarms:diamond_mech_leggings",
+    "octoarms:diamond_mech_boots",
+    "octoarms:netherite_mech_helmet",
+    "octoarms:netherite_mech_chestplate",
+    "octoarms:netherite_mech_leggings",
+    "octoarms:netherite_mech_boots",
+    "octoarms:spider_mech_helmet",
+    "octoarms:spider_mech_chestplate",
+    "octoarms:spider_mech_leggings",
+    "octoarms:spider_mech_boots"
+  ]
+}

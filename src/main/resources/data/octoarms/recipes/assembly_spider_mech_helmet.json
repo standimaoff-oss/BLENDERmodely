@@ -1,0 +1,38 @@
+{
+  "type": "octoarms:assembly",
+  "ingredients": [
+    {
+      "item": "minecraft:netherite_helmet",
+      "count": 1
+    },
+    {
+      "item": "octoarms:netherite_plate",
+      "count": 12
+    },
+    {
+      "item": "octoarms:netherite_gear",
+      "count": 2
+    },
+    {
+      "item": "octoarms:heavy_actuator",
+      "count": 4
+    },
+    {
+      "item": "octoarms:advanced_circuit",
+      "count": 4
+    },
+    {
+      "item": "octoarms:octo_arm",
+      "count": 2
+    },
+    {
+      "item": "octoarms:silk_mesh",
+      "count": 2
+    }
+  ],
+  "result": {
+    "item": "octoarms:spider_mech_helmet",
+    "count": 1
+  },
+  "energy": 48000
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "octoarms:item/netherite_mech_boots"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "octoarms:pressing",
+  "ingredients": [
+    {
+      "item": "octoarms:iron_plate",
+      "count": 1
+    },
+    {
+      "item": "octoarms:copper_plate",
+      "count": 1
+    }
+  ],
+  "result": {
+    "item": "octoarms:heavy_slug",
+    "count": 2
+  },
+  "process_time": 120
+}

@@ -1,0 +1,46 @@
+{
+  "type": "octoarms:assembly",
+  "ingredients": [
+    {
+      "item": "minecraft:netherite_chestplate",
+      "count": 1
+    },
+    {
+      "item": "octoarms:netherite_plate",
+      "count": 21
+    },
+    {
+      "item": "octoarms:netherite_gear",
+      "count": 4
+    },
+    {
+      "item": "octoarms:heavy_actuator",
+      "count": 6
+    },
+    {
+      "item": "octoarms:advanced_circuit",
+      "count": 3
+    },
+    {
+      "item": "octoarms:reinforced_frame",
+      "count": 3
+    },
+    {
+      "item": "octoarms:nether_power_core",
+      "count": 3
+    },
+    {
+      "item": "octoarms:thruster_module",
+      "count": 3
+    },
+    {
+      "item": "octoarms:obsidian_plate",
+      "count": 3
+    }
+  ],
+  "result": {
+    "item": "octoarms:netherite_mech_chestplate",
+    "count": 1
+  },
+  "energy": 98000
+}

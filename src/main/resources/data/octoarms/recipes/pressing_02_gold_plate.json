@@ -1,0 +1,14 @@
+{
+  "type": "octoarms:pressing",
+  "ingredients": [
+    {
+      "item": "minecraft:gold_ingot",
+      "count": 1
+    }
+  ],
+  "result": {
+    "item": "octoarms:gold_plate",
+    "count": 1
+  },
+  "process_time": 120
+}

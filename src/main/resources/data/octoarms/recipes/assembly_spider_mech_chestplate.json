@@ -1,0 +1,50 @@
+{
+  "type": "octoarms:assembly",
+  "ingredients": [
+    {
+      "item": "minecraft:netherite_chestplate",
+      "count": 1
+    },
+    {
+      "item": "octoarms:netherite_plate",
+      "count": 24
+    },
+    {
+      "item": "octoarms:netherite_gear",
+      "count": 4
+    },
+    {
+      "item": "octoarms:heavy_actuator",
+      "count": 6
+    },
+    {
+      "item": "octoarms:advanced_circuit",
+      "count": 4
+    },
+    {
+      "item": "octoarms:reinforced_frame",
+      "count": 4
+    },
+    {
+      "item": "octoarms:nether_power_core",
+      "count": 4
+    },
+    {
+      "item": "octoarms:thruster_module",
+      "count": 4
+    },
+    {
+      "item": "octoarms:octo_arm",
+      "count": 4
+    },
+    {
+      "item": "octoarms:silk_mesh",
+      "count": 4
+    }
+  ],
+  "result": {
+    "item": "octoarms:spider_mech_chestplate",
+    "count": 1
+  },
+  "energy": 112000
+}

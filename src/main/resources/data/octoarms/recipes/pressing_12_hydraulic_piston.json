@@ -1,0 +1,18 @@
+{
+  "type": "octoarms:pressing",
+  "ingredients": [
+    {
+      "item": "minecraft:piston",
+      "count": 1
+    },
+    {
+      "item": "octoarms:iron_plate",
+      "count": 2
+    }
+  ],
+  "result": {
+    "item": "octoarms:hydraulic_piston",
+    "count": 1
+  },
+  "process_time": 180
+}

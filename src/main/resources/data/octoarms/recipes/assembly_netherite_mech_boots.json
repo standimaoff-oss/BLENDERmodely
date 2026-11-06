@@ -1,0 +1,38 @@
+{
+  "type": "octoarms:assembly",
+  "ingredients": [
+    {
+      "item": "minecraft:netherite_boots",
+      "count": 1
+    },
+    {
+      "item": "octoarms:netherite_plate",
+      "count": 10
+    },
+    {
+      "item": "octoarms:netherite_gear",
+      "count": 2
+    },
+    {
+      "item": "octoarms:heavy_actuator",
+      "count": 4
+    },
+    {
+      "item": "octoarms:advanced_circuit",
+      "count": 3
+    },
+    {
+      "item": "octoarms:hydraulic_piston",
+      "count": 3
+    },
+    {
+      "item": "octoarms:obsidian_plate",
+      "count": 3
+    }
+  ],
+  "result": {
+    "item": "octoarms:netherite_mech_boots",
+    "count": 1
+  },
+  "energy": 49000
+}

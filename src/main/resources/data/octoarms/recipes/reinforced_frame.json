@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PIP",
+    "AFA",
+    "PIP"
+  ],
+  "key": {
+    "P": {
+      "item": "octoarms:iron_plate"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "A": {
+      "item": "octoarms:actuator"
+    },
+    "F": {
+      "item": "octoarms:obsidian_plate"
+    }
+  },
+  "result": {
+    "item": "octoarms:reinforced_frame",
+    "count": 1
+  }
+}

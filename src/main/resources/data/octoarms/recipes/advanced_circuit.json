@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "octoarms:circuit_board"
+    },
+    {
+      "item": "octoarms:gold_plate"
+    },
+    {
+      "item": "minecraft:redstone_block"
+    }
+  ],
+  "result": {
+    "item": "octoarms:advanced_circuit",
+    "count": 1
+  }
+}

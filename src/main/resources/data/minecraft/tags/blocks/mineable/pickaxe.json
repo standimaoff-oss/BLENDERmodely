@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "octoarms:hydraulic_press",
+    "octoarms:charging_dock",
+    "octoarms:mech_assembler",
+    "octoarms:steel_casing",
+    "octoarms:coil_block"
+  ]
+}

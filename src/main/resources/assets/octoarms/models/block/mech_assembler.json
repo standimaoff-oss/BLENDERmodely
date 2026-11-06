@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "top": "octoarms:block/mech_assembler_top",
+    "bottom": "octoarms:block/mech_assembler_bottom",
+    "side": "octoarms:block/mech_assembler_side",
+    "front": "octoarms:block/mech_assembler_front"
+  }
+}

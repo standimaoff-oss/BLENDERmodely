@@ -1,0 +1,18 @@
+{
+  "type": "octoarms:pressing",
+  "ingredients": [
+    {
+      "item": "minecraft:coal",
+      "count": 2
+    },
+    {
+      "item": "minecraft:blaze_powder",
+      "count": 1
+    }
+  ],
+  "result": {
+    "item": "octoarms:enriched_coal",
+    "count": 2
+  },
+  "process_time": 160
+}

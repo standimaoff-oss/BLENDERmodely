@@ -1,0 +1,30 @@
+{
+  "type": "octoarms:assembly",
+  "ingredients": [
+    {
+      "item": "minecraft:golden_helmet",
+      "count": 1
+    },
+    {
+      "item": "octoarms:gold_plate",
+      "count": 3
+    },
+    {
+      "item": "octoarms:copper_gear",
+      "count": 1
+    },
+    {
+      "item": "octoarms:thruster_module",
+      "count": 2
+    },
+    {
+      "item": "octoarms:advanced_circuit",
+      "count": 1
+    }
+  ],
+  "result": {
+    "item": "octoarms:gold_mech_helmet",
+    "count": 1
+  },
+  "energy": 14400
+}
