@@ -83,7 +83,7 @@ jobs:
           cat run/options.txt | head -5
 
       - name: Prepare test world (level.dat with cheats + creative)
-        run: python3 tools/make_test_world.py run/saves OctoTest
+        run: python3 tools/make_test_world.py run OctoTest
 
       - name: Start Xvfb on :99 (1280x720x24)
         run: |

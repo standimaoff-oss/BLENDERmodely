@@ -1,16 +1,30 @@
 #!/usr/bin/env python3
-"""Create a minimal but valid MC 1.20.1 world save (level.dat only).
+"""Create a minimal but valid MC 1.20.1 world save (level.dat only) plus an
+ops.json that grants the headless test player permission level 4 (the
+integrated server reads ops.json from the game directory).
 
 Chunks are generated on demand by the game; `initialized: 0` makes the server
-run first-load spawn setup. GameType=1 (creative) + allowCommands=1 give the
-headless test player cheats without any menu clicks.
+run first-load spawn setup. GameType=1 (creative) + allowCommands=1 enable
+cheats without any menu clicks.
 
-Usage: python3 tools/make_test_world.py <saves-dir> [world-name]
+Usage: python3 tools/make_test_world.py <game-dir> [world-name]
 """
 import gzip
+import hashlib
+import json
 import struct
 import sys
+import uuid
 from pathlib import Path
+
+
+def offline_uuid(name: str) -> str:
+    """Java UUID.nameUUIDFromBytes(("OfflinePlayer:" + name).getBytes())."""
+    digest = hashlib.md5(b"OfflinePlayer:" + name.encode()).digest()
+    b = bytearray(digest)
+    b[6] = (b[6] & 0x0F) | 0x30   # version 3
+    b[8] = (b[8] & 0x3F) | 0x80   # variant
+    return str(uuid.UUID(bytes=bytes(b)))
 
 def tag(t: int, name: str, payload: bytes) -> bytes:
     return bytes([t]) + struct.pack(">H", len(name)) + name.encode() + payload
@@ -25,8 +39,10 @@ def compound(entries: list[tuple[int, str, bytes]]) -> bytes:
     return out + b"\x00"
 
 def main() -> None:
-    saves = Path(sys.argv[1] if len(sys.argv) > 1 else "run/saves")
+    game = Path(sys.argv[1] if len(sys.argv) > 1 else "run")
+    saves = game / "saves"
     name = sys.argv[2] if len(sys.argv) > 2 else "OctoTest"
+    player = sys.argv[3] if len(sys.argv) > 3 else "OctoTester"
     seed = 20261106
 
     version = compound([
@@ -71,6 +87,15 @@ def main() -> None:
     # empty datapacks dir keeps the loader quiet
     (world / "datapacks").mkdir(exist_ok=True)
     print(f"wrote {world / 'level.dat'} ({(world / 'level.dat').stat().st_size} bytes gz)")
+
+    ops = game / "ops.json"
+    ops.write_text(json.dumps([{
+        "uuid": offline_uuid(player),
+        "name": player,
+        "level": 4,
+        "bypassesPlayerLimit": False,
+    }], indent=2) + "\n")
+    print(f"wrote {ops} (op {player}, level 4)")
 
 if __name__ == "__main__":
     main()

@@ -64,7 +64,9 @@ shot; log "shot: in-world (first person)"
 key F5; sleep 10
 shot; log "shot: in-world (third person back)"
 
-# --- commands (cheats are enabled in level.dat) ---
+# --- commands (cheats in level.dat + ops.json level 4) ---
+type_cmd "/help"
+shot; log "shot: chat feedback for /help (tree diagnostics)"
 type_cmd "/gamemode creative"
 type_cmd "/give @s octoarms:spider_mech_chestplate 1"
 type_cmd "/give @s octoarms:diamond_mech_helmet 1"
