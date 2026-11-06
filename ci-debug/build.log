@@ -15,11 +15,11 @@ Daemon will be stopped at the end of the build
 
 > Configure project :
 Java: 17.0.21, JVM: 17.0.21+9 (Eclipse Adoptium), Arch: amd64
-Directory '/home/runner/.gradle/daemon/8.1.1/${env.JAVA_HOME_11_X64}' (Maven Toolchains) used for java installations does not exist
 Directory '/home/runner/.gradle/daemon/8.1.1/${env.JAVA_HOME_17_X64}' (Maven Toolchains) used for java installations does not exist
-Directory '/home/runner/.gradle/daemon/8.1.1/${env.JAVA_HOME_8_X64}' (Maven Toolchains) used for java installations does not exist
 Directory '/home/runner/.gradle/daemon/8.1.1/${env.JAVA_HOME_21_X64}' (Maven Toolchains) used for java installations does not exist
 Directory '/home/runner/.gradle/daemon/8.1.1/${env.JAVA_HOME_25_X64}' (Maven Toolchains) used for java installations does not exist
+Directory '/home/runner/.gradle/daemon/8.1.1/${env.JAVA_HOME_8_X64}' (Maven Toolchains) used for java installations does not exist
+Directory '/home/runner/.gradle/daemon/8.1.1/${env.JAVA_HOME_11_X64}' (Maven Toolchains) used for java installations does not exist
 
 > Task :compileJava
 Setting up MCP environment
@@ -38,216 +38,62 @@ Executing steps
  > Running 'listLibraries'
  > Running 'rename'
 Stopping at requested step: /home/runner/.gradle/caches/forge_gradle/mcp_repo/de/oceanlabs/mcp/mcp_config/1.20.1-20230612.114412/joined/rename/output.jar
-[10:20:34] [main/INFO]: Writing debug log file accesstransform.log
-[10:20:34] [main/INFO]: Access Transformer processor running version 8.2.14
-[10:20:34] [main/INFO]: Command line arguments [--inJar, /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.2.0/forge-1.20.1-47.2.0-injected.jar, --outJar, /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.2.0_mapped_official_1.20.1/forge-1.20.1-47.2.0_mapped_official_1.20.1.jar, --logFile, accesstransform.log, --atFile, /home/runner/work/BLENDERmodely/BLENDERmodely/build/_atJar_4/parent_at.cfg]
-[10:20:34] [main/INFO]: Reading from /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.2.0/forge-1.20.1-47.2.0-injected.jar
-[10:20:34] [main/INFO]: Writing to /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.2.0_mapped_official_1.20.1/forge-1.20.1-47.2.0_mapped_official_1.20.1.jar
-[10:20:34] [main/INFO]: Transformer file /home/runner/work/BLENDERmodely/BLENDERmodely/build/_atJar_4/parent_at.cfg
-[10:20:34] [main/WARN]: Found existing output jar /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.2.0_mapped_official_1.20.1/forge-1.20.1-47.2.0_mapped_official_1.20.1.jar, overwriting
-[10:20:38] [main/INFO]: JAR transformation complete /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.2.0_mapped_official_1.20.1/forge-1.20.1-47.2.0_mapped_official_1.20.1.jar
+[11:45:56] [main/INFO]: Writing debug log file accesstransform.log
+[11:45:56] [main/INFO]: Access Transformer processor running version 8.2.14
+[11:45:56] [main/INFO]: Command line arguments [--inJar, /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.2.0/forge-1.20.1-47.2.0-injected.jar, --outJar, /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.2.0_mapped_official_1.20.1/forge-1.20.1-47.2.0_mapped_official_1.20.1.jar, --logFile, accesstransform.log, --atFile, /home/runner/work/BLENDERmodely/BLENDERmodely/build/_atJar_4/parent_at.cfg]
+[11:45:56] [main/INFO]: Reading from /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.2.0/forge-1.20.1-47.2.0-injected.jar
+[11:45:56] [main/INFO]: Writing to /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.2.0_mapped_official_1.20.1/forge-1.20.1-47.2.0_mapped_official_1.20.1.jar
+[11:45:56] [main/INFO]: Transformer file /home/runner/work/BLENDERmodely/BLENDERmodely/build/_atJar_4/parent_at.cfg
+[11:45:56] [main/WARN]: Found existing output jar /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.2.0_mapped_official_1.20.1/forge-1.20.1-47.2.0_mapped_official_1.20.1.jar, overwriting
+[11:45:59] [main/INFO]: JAR transformation complete /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.2.0_mapped_official_1.20.1/forge-1.20.1-47.2.0_mapped_official_1.20.1.jar
 Creating SRG -> MCP TSRG
-/home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/entity/RailSlugEntity.java:6: error: cannot find symbol
-import net.minecraft.world.damagesource.EntityDamageSource;
-                                       ^
-  symbol:   class EntityDamageSource
-  location: package net.minecraft.world.damagesource
-/home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/entity/PlasmaBoltEntity.java:6: error: cannot find symbol
-import net.minecraft.world.damagesource.EntityDamageSource;
-                                       ^
-  symbol:   class EntityDamageSource
-  location: package net.minecraft.world.damagesource
-/home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/registry/OctoBlocks.java:11: error: cannot find symbol
-import net.minecraft.world.level.material.Material;
-                                         ^
-  symbol:   class Material
-  location: package net.minecraft.world.level.material
-/home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/client/OctoClient.java:11: error: cannot find symbol
-import net.minecraft.client.renderer.entity.PlayerRenderer;
-                                           ^
-  symbol:   class PlayerRenderer
-  location: package net.minecraft.client.renderer.entity
-/home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/entity/RailSlugEntity.java:73: error: cannot find symbol
-        target.hurt(new EntityDamageSource("octoarms.rail", owner == null ? this : owner), damage);
-                        ^
-  symbol:   class EntityDamageSource
-  location: class RailSlugEntity
-/home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/entity/RailSlugEntity.java:74: error: incompatible types: Vec3 cannot be converted to Entity
-        target.push(getDeltaMovement().normalize().scale(0.9D));
-                                                        ^
-/home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/entity/PlasmaBoltEntity.java:63: error: cannot find symbol
-        target.hurt(new EntityDamageSource("octoarms.plasma", owner == null ? this : owner), damage);
-                        ^
-  symbol:   class EntityDamageSource
-  location: class PlasmaBoltEntity
-/home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/mech/MechSuitTier.java:114: error: an enum switch case label must be the unqualified name of an enumeration constant
-            case CHEST -> defense[1];
-                 ^
-/home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/mech/MechSuitTier.java:123: error: an enum switch case label must be the unqualified name of an enumeration constant
-            case CHEST -> 16;
-                 ^
-/home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/mech/MechEvents.java:181: error: cannot find symbol
-        if (source.isCreativePlayer() || source.isFall()) {
-                                               ^
-  symbol:   method isFall()
-  location: variable source of type DamageSource
-/home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/registry/OctoBlocks.java:21: error: cannot find symbol
-        return BlockBehaviour.Properties.of(Material.METAL)
-                                            ^
-  symbol:   variable Material
-  location: class OctoBlocks
-/home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/registry/OctoBlocks.java:41: error: cannot find symbol
-            () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
-                                                         ^
-  symbol:   variable Material
-  location: class OctoBlocks
-/home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/registry/OctoBlocks.java:47: error: cannot find symbol
-            () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
-                                                         ^
-  symbol:   variable Material
-  location: class OctoBlocks
-/home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/registry/OctoTabs.java:14: error: cannot find symbol
-            DeferredRegister.create(ForgeRegistries.CREATIVE_MODE_TABS, OctoArms.MODID);
-                                                   ^
-  symbol:   variable CREATIVE_MODE_TABS
-  location: class ForgeRegistries
-/home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/registry/OctoItems.java:63: error: cannot find symbol
-                    () -> new MechArmorItem(tier, ArmorItem.Type.CHEST)));
-                                                                ^
-  symbol:   variable CHEST
-  location: class Type
-/home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/registry/OctoItems.java:67: error: cannot find symbol
-                    () -> new MechArmorItem(tier, ArmorItem.Type.FEET)));
-                                                                ^
-  symbol:   variable FEET
-  location: class Type
-/home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/item/MechArmorItem.java:77: warning: [removal] onArmorTick(ItemStack,Level,Player) in IForgeItem has been deprecated and marked for removal
+/home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/item/MechArmorItem.java:72: warning: [removal] onArmorTick(ItemStack,Level,Player) in IForgeItem has been deprecated and marked for removal
     public void onArmorTick(ItemStack stack, Level level, Player player) {
                 ^
-/home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/item/MechArmorItem.java:44: error: cannot find symbol
-        if (type == ArmorItem.Type.CHEST) {
-                                  ^
-  symbol:   variable CHEST
-  location: class Type
-/home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/item/MechArmorItem.java:51: error: cannot find symbol
-            builder.put(ForgeMod.REACH_DISTANCE.get(), new AttributeModifier(uuid, "Octo reach",
-                                ^
-  symbol:   variable REACH_DISTANCE
-  location: class ForgeMod
 /home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/item/ArmCannonItem.java:49: error: cannot find symbol
-        if (player.getCooldowns().isCoolingDown(this)) {
+        if (player.getCooldowns().isCoolingDown(stack)) {
                                  ^
-  symbol:   method isCoolingDown(ArmCannonItem)
+  symbol:   method isCoolingDown(ItemStack)
   location: class ItemCooldowns
+/home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/item/ArmCannonItem.java:67: error: incompatible types: ItemStack cannot be converted to Item
+        player.getCooldowns().addCooldown(stack, 12);
+                                          ^
+/home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/item/RailgunItem.java:94: error: incompatible types: ItemStack cannot be converted to Item
+            player.getCooldowns().addCooldown(stack, 30);
+                                              ^
 /home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/network/packet/FireIntegratedPacket.java:44: error: cannot find symbol
-            if (!tier.integratedCannon || player.getCooldowns().isCoolingDown(chest.getItem())) {
+            if (!tier.integratedCannon || player.getCooldowns().isCoolingDown(chest)) {
                                                                ^
-  symbol:   method isCoolingDown(Item)
+  symbol:   method isCoolingDown(ItemStack)
   location: class ItemCooldowns
+/home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/network/packet/FireIntegratedPacket.java:65: error: incompatible types: ItemStack cannot be converted to Item
+            player.getCooldowns().addCooldown(chest, 14);
+                                              ^
 /home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/client/OctoClient.java:29: error: incompatible types: cannot infer type-variable(s) M,U
-            MenuScreens.register(OctoMenuTypes.PRESS.get(), MachineScreen::press);
+            MenuScreens.register(OctoMenuTypes.PRESS.get(),
                                 ^
     (argument mismatch; cannot infer functional interface descriptor for ScreenConstructor<PressMenu,U>)
   where M,U are type-variables:
     M extends AbstractContainerMenu declared in method <M,U>register(MenuType<? extends M>,ScreenConstructor<M,U>)
     U extends Screen,MenuAccess<M> declared in method <M,U>register(MenuType<? extends M>,ScreenConstructor<M,U>)
-/home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/client/OctoClient.java:30: error: incompatible types: cannot infer type-variable(s) M,U
-            MenuScreens.register(OctoMenuTypes.CHARGER.get(), MachineScreen::charger);
+/home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/client/OctoClient.java:31: error: incompatible types: cannot infer type-variable(s) M,U
+            MenuScreens.register(OctoMenuTypes.CHARGER.get(),
                                 ^
     (argument mismatch; cannot infer functional interface descriptor for ScreenConstructor<ChargerMenu,U>)
   where M,U are type-variables:
     M extends AbstractContainerMenu declared in method <M,U>register(MenuType<? extends M>,ScreenConstructor<M,U>)
     U extends Screen,MenuAccess<M> declared in method <M,U>register(MenuType<? extends M>,ScreenConstructor<M,U>)
-/home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/client/OctoClient.java:31: error: incompatible types: cannot infer type-variable(s) M,U
-            MenuScreens.register(OctoMenuTypes.ASSEMBLER.get(), MachineScreen::assembler);
+/home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/client/OctoClient.java:33: error: incompatible types: cannot infer type-variable(s) M,U
+            MenuScreens.register(OctoMenuTypes.ASSEMBLER.get(),
                                 ^
     (argument mismatch; cannot infer functional interface descriptor for ScreenConstructor<AssemblerMenu,U>)
   where M,U are type-variables:
     M extends AbstractContainerMenu declared in method <M,U>register(MenuType<? extends M>,ScreenConstructor<M,U>)
     U extends Screen,MenuAccess<M> declared in method <M,U>register(MenuType<? extends M>,ScreenConstructor<M,U>)
-/home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/client/OctoClient.java:46: error: cannot find symbol
-            PlayerRenderer renderer = event.getSkin(skin);
-            ^
-  symbol:   class PlayerRenderer
-  location: class OctoClient
-/home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/client/model/OctoArmsModel.java:54: error: incompatible types: PartDefinition cannot be converted to ModelPart
-        cannonLeft = rootDef.addOrReplaceChild("cannon_left", CubeListBuilder.create()
-                                              ^
-/home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/client/model/OctoArmsModel.java:57: error: cannot find symbol
-        cannonLeft.addOrReplaceChild("barrel_left", CubeListBuilder.create()
-                  ^
-  symbol:   method addOrReplaceChild(String,CubeListBuilder,PartPose)
-  location: variable cannonLeft of type ModelPart
-/home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/client/model/OctoArmsModel.java:60: error: incompatible types: PartDefinition cannot be converted to ModelPart
-        cannonRight = rootDef.addOrReplaceChild("cannon_right", CubeListBuilder.create()
-                                               ^
-/home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/client/model/OctoArmsModel.java:63: error: cannot find symbol
-        cannonRight.addOrReplaceChild("barrel_right", CubeListBuilder.create()
-                   ^
-  symbol:   method addOrReplaceChild(String,CubeListBuilder,PartPose)
-  location: variable cannonRight of type ModelPart
-/home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/client/model/OctoArmsModel.java:67: error: incompatible types: PartDefinition cannot be converted to ModelPart
-        thruster = rootDef.addOrReplaceChild("thruster", CubeListBuilder.create()
-                                            ^
-/home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/client/model/OctoArmsModel.java:70: error: cannot find symbol
-        flame = thruster.addOrReplaceChild("flame", CubeListBuilder.create()
-                        ^
-  symbol:   method addOrReplaceChild(String,CubeListBuilder,PartPose)
-  location: variable thruster of type ModelPart
-/home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/client/model/OctoArmsModel.java:73: error: incompatible types: PartDefinition cannot be converted to ModelPart
-        eyes = rootDef.addOrReplaceChild("eyes", CubeListBuilder.create()
-                                        ^
-/home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/client/renderer/OrbRenderer.java:37: error: cannot find symbol
-        entityRenderDispatcher.getItemRenderer().renderStatic(
-                              ^
-  symbol:   method getItemRenderer()
-  location: variable entityRenderDispatcher of type EntityRenderDispatcher
-/home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/client/screen/MachineScreen.java:54: error: cannot find symbol
-        int lit = menu.getData(0);
-                      ^
-  symbol:   method getData(int)
-  location: variable menu of type T
-  where T is a type-variable:
-    T extends AbstractContainerMenu declared in class AbstractContainerScreen
-/home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/client/screen/MachineScreen.java:55: error: cannot find symbol
-        int litTotal = Math.max(1, menu.getData(1));
-                                       ^
-  symbol:   method getData(int)
-  location: variable menu of type T
-  where T is a type-variable:
-    T extends AbstractContainerMenu declared in class AbstractContainerScreen
-/home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/client/screen/MachineScreen.java:56: error: cannot find symbol
-        int progress = menu.getData(2);
-                           ^
-  symbol:   method getData(int)
-  location: variable menu of type T
-  where T is a type-variable:
-    T extends AbstractContainerMenu declared in class AbstractContainerScreen
-/home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/client/screen/MachineScreen.java:57: error: cannot find symbol
-        int progressTotal = Math.max(1, menu.getData(3));
-                                            ^
-  symbol:   method getData(int)
-  location: variable menu of type T
-  where T is a type-variable:
-    T extends AbstractContainerMenu declared in class AbstractContainerScreen
-/home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/client/screen/MachineScreen.java:58: error: cannot find symbol
-        int energy = menu.getData(4);
-                         ^
-  symbol:   method getData(int)
-  location: variable menu of type T
-  where T is a type-variable:
-    T extends AbstractContainerMenu declared in class AbstractContainerScreen
-/home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/client/screen/MachineScreen.java:59: error: cannot find symbol
-        int energyCap = Math.max(1, menu.getData(5));
-                                        ^
-  symbol:   method getData(int)
-  location: variable menu of type T
-  where T is a type-variable:
-    T extends AbstractContainerMenu declared in class AbstractContainerScreen
 Note: /home/runner/work/BLENDERmodely/BLENDERmodely/src/main/java/com/octoarms/block/MachineBlock.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
 Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
-38 errors
+8 errors
 1 warning
 
 > Task :compileJava FAILED
