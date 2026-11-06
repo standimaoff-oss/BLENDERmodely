@@ -102,9 +102,14 @@ type_cmd "/item replace entity @e[type=minecraft:armor_stand,sort=nearest,limit=
 type_cmd "/item replace entity @e[type=minecraft:armor_stand,sort=nearest,limit=1] armor.chest with octoarms:spider_mech_chestplate"
 type_cmd "/item replace entity @e[type=minecraft:armor_stand,sort=nearest,limit=1] armor.legs with octoarms:spider_mech_leggings"
 type_cmd "/item replace entity @e[type=minecraft:armor_stand,sort=nearest,limit=1] armor.feet with octoarms:spider_mech_boots"
-type_cmd "/tp @s ~ ~ ~ -45 8"
+type_cmd "/tp @s ~0.5 ~ ~0.5 -45 5"
 sleep 5
-shot; log "shot: armor-stand close-up of spider mech (huge legs)"
+shot; log "shot: armor-stand close-up of spider mech (colossal legs)"
+
+# --- scale comparison: player beside the suited stand, 3rd person front ---
+key F5; sleep 4
+key F5; sleep 6
+shot; log "shot: scale comparison player vs suited armor stand"
 
 # --- flight + cling showcase: double jump starts hover on suits that can ---
 # spider core cannot fly; borrow a diamond core for the hover demo, then swap back

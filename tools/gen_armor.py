@@ -56,20 +56,21 @@ def base_boxes(defl=0.0):
         box("left_arm", (5, 7, 5), (-1.8, 1.6, -2.5), "plate"),
         box("left_arm", (6, 6, 6), (-2.4, 7.6, -3.0), "dark"),
         # legs
-        box("right_leg", (7, 8, 7), (-5.6, -1.5, -3.5), "plate"),      # huge thigh, wide stance
-        box("left_leg", (7, 8, 7), (-1.4, -1.5, -3.5), "plate"),
-        box("right_leg", (3, 3, 3), (-4.5, 4.8, -5.0), "accent"),      # knee piston
-        box("left_leg", (3, 3, 3), (-0.4, 4.8, -5.0), "accent"),
-        box("right_leg", (7, 6, 7), (-5.6, 5.5, -3.5), "accent"),      # shin guard
-        box("left_leg", (7, 6, 7), (-1.4, 5.5, -3.5), "accent"),
-        box("right_leg", (1, 4, 4), (-6.4, 6.0, -2.0), "dark"),        # shin vent out
-        box("left_leg", (1, 4, 4), (5.4, 6.0, -2.0), "dark"),
-        box("right_leg", (9, 4, 11), (-6.5, 8.0, -6.0), "dark"),       # massive boot
-        box("left_leg", (9, 4, 11), (-2.5, 8.0, -6.0), "dark"),
-        box("right_leg", (9, 2, 2), (-6.5, 10.0, -7.4), "accent"),     # toe plate
-        box("left_leg", (9, 2, 2), (-2.5, 10.0, -7.4), "accent"),
-        box("right_leg", (2, 2, 2), (-5.0, 10.0, 4.6), "dark"),        # heel actuator
-        box("left_leg", (2, 2, 2), (3.0, 10.0, 4.6), "dark"),
+        # COLOSSAL servo legs: ~0.6 block thick limbs, 1.25 block long feet
+        box("right_leg", (10, 10, 10), (-9.5, -2.0, -5.0), "plate"),   # colossal thigh
+        box("left_leg", (10, 10, 10), (-0.5, -2.0, -5.0), "plate"),
+        box("right_leg", (4, 4, 4), (-7.0, 1.0, -7.0), "accent"),      # knee piston
+        box("left_leg", (4, 4, 4), (1.1, 1.0, -7.0), "accent"),
+        box("right_leg", (10, 6, 10), (-9.5, 3.0, -5.0), "accent"),    # shin guard
+        box("left_leg", (10, 6, 10), (-0.5, 3.0, -5.0), "accent"),
+        box("right_leg", (2, 6, 6), (-10.5, 4.0, -3.0), "dark"),       # side thruster out
+        box("left_leg", (2, 6, 6), (8.5, 4.0, -3.0), "dark"),
+        box("right_leg", (12, 5, 20), (-10.0, 7.0, -10.0), "dark"),    # colossal boot
+        box("left_leg", (12, 5, 20), (-2.0, 7.0, -10.0), "dark"),
+        box("right_leg", (12, 3, 3), (-10.0, 9.0, -12.5), "accent"),   # toe plate
+        box("left_leg", (12, 3, 3), (-2.0, 9.0, -12.5), "accent"),
+        box("right_leg", (3, 3, 3), (-8.0, 9.0, 9.5), "dark"),         # heel actuator
+        box("left_leg", (3, 3, 3), (3.1, 9.0, 9.5), "dark"),
     ]
 
 
@@ -110,10 +111,10 @@ TIER_EXTRA = {
         box("body", (4, 8, 4), (2.8, 0.0, 3.0), "dark"),
         box("body", (3, 2, 3), (-6.2, -2.4, 3.0), "glow"),
         box("body", (3, 2, 3), (3.2, -2.4, 3.0), "glow"),
-        box("right_leg", (6, 4, 6), (-5.4, 4.4, -3.4), "plate"),       # knee cap
-        box("left_leg", (6, 4, 6), (-0.6, 4.4, -3.4), "plate"),
-        box("right_leg", (2, 6, 2), (-7.2, 2.0, -1.0), "dark"),        # thigh hydraulics
-        box("left_leg", (2, 6, 2), (5.2, 2.0, -1.0), "dark"),
+        box("right_leg", (10, 6, 4), (-9.5, 3.0, -7.0), "plate"),      # knee cap front
+        box("left_leg", (10, 6, 4), (-0.5, 3.0, -7.0), "plate"),
+        box("right_leg", (3, 8, 3), (-12.0, 0.0, -1.5), "dark"),       # thigh hydraulics
+        box("left_leg", (3, 8, 3), (9.0, 0.0, -1.5), "dark"),
     ],
     "spider_mech": [
         box("head", (9, 3, 3), (-4.5, -2.6, -5.6), "dark"),            # fang housing
@@ -131,10 +132,10 @@ TIER_EXTRA = {
         box("body", (3, 3, 3), (3.6, 3.0, 2.6), "dark"),               # octo-arm mount R
         box("right_arm", (5, 5, 5), (-3.4, 8.0, -2.8), "accent"),      # claw gauntlet
         box("left_arm", (5, 5, 5), (-1.6, 8.0, -2.8), "accent"),
-        box("right_leg", (2, 6, 2), (-7.2, 1.6, -1.0), "dark"),        # leg hydraulics
-        box("left_leg", (2, 6, 2), (5.2, 1.6, -1.0), "dark"),
-        box("right_leg", (8, 2, 8), (-6.4, 7.6, -4.4), "accent"),      # wide stance plate
-        box("left_leg", (8, 2, 8), (-1.6, 7.6, -4.4), "accent"),
+        box("right_leg", (3, 8, 3), (-12.0, -0.4, -1.5), "dark"),      # leg hydraulics
+        box("left_leg", (3, 8, 3), (9.0, -0.4, -1.5), "dark"),
+        box("right_leg", (12, 3, 12), (-10.5, 6.5, -6.0), "accent"),   # ankle guard
+        box("left_leg", (12, 3, 12), (-1.5, 6.5, -6.0), "accent"),
     ],
 }
 
