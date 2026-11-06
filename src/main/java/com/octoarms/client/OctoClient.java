@@ -4,6 +4,9 @@ import com.octoarms.OctoArms;
 import com.octoarms.client.renderer.OctoArmsLayer;
 import com.octoarms.client.renderer.OrbRenderer;
 import com.octoarms.client.screen.MachineScreen;
+import com.octoarms.menu.AssemblerMenu;
+import com.octoarms.menu.ChargerMenu;
+import com.octoarms.menu.PressMenu;
 import com.octoarms.registry.OctoEntityTypes;
 import com.octoarms.registry.OctoItems;
 import com.octoarms.registry.OctoMenuTypes;
@@ -26,12 +29,12 @@ public final class OctoClient {
     @SubscribeEvent
     public static void onClientSetup(FMLClientSetupEvent event) {
         event.enqueueWork(() -> {
-            MenuScreens.register(OctoMenuTypes.PRESS.get(),
-                    (menu, inv, title) -> MachineScreen.press(menu, inv, title));
-            MenuScreens.register(OctoMenuTypes.CHARGER.get(),
-                    (menu, inv, title) -> MachineScreen.charger(menu, inv, title));
-            MenuScreens.register(OctoMenuTypes.ASSEMBLER.get(),
-                    (menu, inv, title) -> MachineScreen.assembler(menu, inv, title));
+            MenuScreens.<PressMenu, MachineScreen<PressMenu>>register(
+                    OctoMenuTypes.PRESS.get(), MachineScreen::press);
+            MenuScreens.<ChargerMenu, MachineScreen<ChargerMenu>>register(
+                    OctoMenuTypes.CHARGER.get(), MachineScreen::charger);
+            MenuScreens.<AssemblerMenu, MachineScreen<AssemblerMenu>>register(
+                    OctoMenuTypes.ASSEMBLER.get(), MachineScreen::assembler);
         });
     }
 

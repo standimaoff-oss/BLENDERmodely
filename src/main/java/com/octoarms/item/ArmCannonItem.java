@@ -46,7 +46,7 @@ public class ArmCannonItem extends Item implements IChargeableItem {
         if (level.isClientSide) {
             return InteractionResultHolder.success(stack);
         }
-        if (player.getCooldowns().isCoolingDown(stack)) {
+        if (player.getCooldowns().isOnCooldown(this)) {
             return InteractionResultHolder.fail(stack);
         }
         if (ChargeUtils.overheated(stack)) {
@@ -64,7 +64,7 @@ public class ArmCannonItem extends Item implements IChargeableItem {
         level.addFreshEntity(bolt);
         level.playSound(null, player.getX(), player.getY(), player.getZ(),
                 SoundEvents.BLAZE_SHOOT, SoundSource.PLAYERS, 0.7F, 1.3F);
-        player.getCooldowns().addCooldown(stack, 12);
+        player.getCooldowns().addCooldown(this, 12);
         return InteractionResultHolder.consume(stack);
     }
 

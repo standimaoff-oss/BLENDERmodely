@@ -91,7 +91,7 @@ public class RailgunItem extends Item implements IChargeableItem {
         level.playSound(null, user.getX(), user.getY(), user.getZ(),
                 SoundEvents.CROSSBOW_SHOOT, SoundSource.PLAYERS, 0.9F, 0.5F);
         if (user instanceof Player player) {
-            player.getCooldowns().addCooldown(stack, 30);
+            player.getCooldowns().addCooldown(this, 30);
         }
     }
 

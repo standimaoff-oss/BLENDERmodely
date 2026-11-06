@@ -41,7 +41,7 @@ public class FireIntegratedPacket {
                 return;
             }
             MechSuitTier tier = armor.tier();
-            if (!tier.integratedCannon || player.getCooldowns().isCoolingDown(chest)) {
+            if (!tier.integratedCannon || player.getCooldowns().isOnCooldown(chest.getItem())) {
                 return;
             }
             if (ChargeUtils.overheated(chest)) {
@@ -62,7 +62,7 @@ public class FireIntegratedPacket {
             player.level().addFreshEntity(bolt);
             player.level().playSound(null, player.getX(), player.getY(), player.getZ(),
                     SoundEvents.BLAZE_SHOOT, SoundSource.PLAYERS, 0.8F, 1.1F);
-            player.getCooldowns().addCooldown(chest, 14);
+            player.getCooldowns().addCooldown(chest.getItem(), 14);
         });
         ctx.get().setPacketHandled(true);
     }
