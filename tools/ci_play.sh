@@ -87,16 +87,24 @@ sleep 15
 key F5; sleep 8
 shot; log "shot: wearing full mixed mech set (3rd person front)"
 
-# --- close-up: spider suit on an armor stand 2.5 blocks ahead, first person ---
+# --- first person: look down at own huge mech boots ---
 key F5; sleep 4
-type_cmd "/summon minecraft:armor_stand ^ ^-1.62 ^2.5 {ShowArms:1b,NoBasePlate:1b}"
+type_cmd "/tp @s ~ ~ ~ ~360 55"
+sleep 3
+shot; log "shot: first-person view of own mech boots/legs"
+type_cmd "/tp @s ~ ~ ~ ~360 0"
+sleep 2
+
+# --- close-up: spider suit on an armor stand at (+2,+2), aim with /tp ---
+type_cmd "/summon minecraft:armor_stand ~2 ~ ~2 {ShowArms:1b,NoBasePlate:1b}"
 sleep 3
 type_cmd "/item replace entity @e[type=minecraft:armor_stand,sort=nearest,limit=1] slot.armor.head with octoarms:spider_mech_helmet"
 type_cmd "/item replace entity @e[type=minecraft:armor_stand,sort=nearest,limit=1] slot.armor.chest with octoarms:spider_mech_chestplate"
 type_cmd "/item replace entity @e[type=minecraft:armor_stand,sort=nearest,limit=1] slot.armor.legs with octoarms:spider_mech_leggings"
 type_cmd "/item replace entity @e[type=minecraft:armor_stand,sort=nearest,limit=1] slot.armor.feet with octoarms:spider_mech_boots"
-sleep 6
-shot; log "shot: first-person close-up of spider mech on armor stand (huge legs)"
+type_cmd "/tp @s ~ ~ ~ -45 8"
+sleep 5
+shot; log "shot: armor-stand close-up of spider mech (huge legs)"
 
 # --- flight + cling showcase: double jump starts hover on suits that can ---
 # spider core cannot fly; borrow a diamond core for the hover demo, then swap back

@@ -56,20 +56,20 @@ def base_boxes(defl=0.0):
         box("left_arm", (5, 7, 5), (-1.8, 1.6, -2.5), "plate"),
         box("left_arm", (6, 6, 6), (-2.4, 7.6, -3.0), "dark"),
         # legs
-        box("right_leg", (6, 7, 6), (-3.7, -1.2, -3.2), "plate"),      # thigh
-        box("left_leg", (6, 7, 6), (-2.3, -1.2, -3.2), "plate"),
-        box("right_leg", (3, 3, 3), (-3.0, 4.6, -4.6), "accent"),      # knee piston
-        box("left_leg", (3, 3, 3), (0.0, 4.6, -4.6), "accent"),
-        box("right_leg", (6, 7, 6), (-3.7, 5.2, -3.2), "accent"),      # shin guard
-        box("left_leg", (6, 7, 6), (-2.3, 5.2, -3.2), "accent"),
-        box("right_leg", (1, 5, 4), (-4.5, 5.6, -2.0), "dark"),        # shin vent out
-        box("left_leg", (1, 5, 4), (3.5, 5.6, -2.0), "dark"),
-        box("right_leg", (7, 3, 9), (-4.0, 9.0, -5.0), "dark"),        # boot
-        box("left_leg", (7, 3, 9), (-3.0, 9.0, -5.0), "dark"),
-        box("right_leg", (7, 2, 2), (-4.0, 10.0, -6.4), "accent"),     # toe plate
-        box("left_leg", (7, 2, 2), (-3.0, 10.0, -6.4), "accent"),
-        box("right_leg", (2, 2, 2), (-3.4, 10.0, 3.6), "dark"),        # heel actuator
-        box("left_leg", (2, 2, 2), (-0.5, 10.0, 3.6), "dark"),
+        box("right_leg", (7, 8, 7), (-5.6, -1.5, -3.5), "plate"),      # huge thigh, wide stance
+        box("left_leg", (7, 8, 7), (-1.4, -1.5, -3.5), "plate"),
+        box("right_leg", (3, 3, 3), (-4.5, 4.8, -5.0), "accent"),      # knee piston
+        box("left_leg", (3, 3, 3), (-0.4, 4.8, -5.0), "accent"),
+        box("right_leg", (7, 6, 7), (-5.6, 5.5, -3.5), "accent"),      # shin guard
+        box("left_leg", (7, 6, 7), (-1.4, 5.5, -3.5), "accent"),
+        box("right_leg", (1, 4, 4), (-6.4, 6.0, -2.0), "dark"),        # shin vent out
+        box("left_leg", (1, 4, 4), (5.4, 6.0, -2.0), "dark"),
+        box("right_leg", (9, 4, 11), (-6.5, 8.0, -6.0), "dark"),       # massive boot
+        box("left_leg", (9, 4, 11), (-2.5, 8.0, -6.0), "dark"),
+        box("right_leg", (9, 2, 2), (-6.5, 10.0, -7.4), "accent"),     # toe plate
+        box("left_leg", (9, 2, 2), (-2.5, 10.0, -7.4), "accent"),
+        box("right_leg", (2, 2, 2), (-5.0, 10.0, 4.6), "dark"),        # heel actuator
+        box("left_leg", (2, 2, 2), (3.0, 10.0, 4.6), "dark"),
     ]
 
 
@@ -110,10 +110,10 @@ TIER_EXTRA = {
         box("body", (4, 8, 4), (2.8, 0.0, 3.0), "dark"),
         box("body", (3, 2, 3), (-6.2, -2.4, 3.0), "glow"),
         box("body", (3, 2, 3), (3.2, -2.4, 3.0), "glow"),
-        box("right_leg", (6, 4, 6), (-3.7, 4.4, -3.4), "plate"),       # knee cap
-        box("left_leg", (6, 4, 6), (-2.3, 4.4, -3.4), "plate"),
-        box("right_leg", (2, 6, 2), (-5.4, 2.0, -1.0), "dark"),        # thigh hydraulics
-        box("left_leg", (2, 6, 2), (3.4, 2.0, -1.0), "dark"),
+        box("right_leg", (6, 4, 6), (-5.4, 4.4, -3.4), "plate"),       # knee cap
+        box("left_leg", (6, 4, 6), (-0.6, 4.4, -3.4), "plate"),
+        box("right_leg", (2, 6, 2), (-7.2, 2.0, -1.0), "dark"),        # thigh hydraulics
+        box("left_leg", (2, 6, 2), (5.2, 2.0, -1.0), "dark"),
     ],
     "spider_mech": [
         box("head", (9, 3, 3), (-4.5, -2.6, -5.6), "dark"),            # fang housing
@@ -131,10 +131,10 @@ TIER_EXTRA = {
         box("body", (3, 3, 3), (3.6, 3.0, 2.6), "dark"),               # octo-arm mount R
         box("right_arm", (5, 5, 5), (-3.4, 8.0, -2.8), "accent"),      # claw gauntlet
         box("left_arm", (5, 5, 5), (-1.6, 8.0, -2.8), "accent"),
-        box("right_leg", (2, 6, 2), (-5.4, 1.6, -1.0), "dark"),        # leg hydraulics
-        box("left_leg", (2, 6, 2), (3.4, 1.6, -1.0), "dark"),
-        box("right_leg", (8, 2, 8), (-4.4, 8.6, -4.4), "accent"),      # wide stance plate
-        box("left_leg", (8, 2, 8), (-3.6, 8.6, -4.4), "accent"),
+        box("right_leg", (2, 6, 2), (-7.2, 1.6, -1.0), "dark"),        # leg hydraulics
+        box("left_leg", (2, 6, 2), (5.2, 1.6, -1.0), "dark"),
+        box("right_leg", (8, 2, 8), (-6.4, 7.6, -4.4), "accent"),      # wide stance plate
+        box("left_leg", (8, 2, 8), (-1.6, 7.6, -4.4), "accent"),
     ],
 }
 
