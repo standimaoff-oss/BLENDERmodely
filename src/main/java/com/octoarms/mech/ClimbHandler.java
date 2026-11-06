@@ -2,6 +2,7 @@ package com.octoarms.mech;
 
 import com.octoarms.OctoConfig;
 import com.octoarms.item.MechArmorItem;
+import com.octoarms.registry.OctoTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleOptions;
