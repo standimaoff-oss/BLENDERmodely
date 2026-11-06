@@ -1,0 +1,56 @@
+[play] waiting for the Minecraft window (up to 25 min, llvmpipe is slow)...
+[play] window id: 2097161
+[play] shot: title screen
+[play] shot: after onboarding dismiss
+[play] shot: mods list
+[play] shot: world list
+[play] shot: create-world screen
+[play] shot: game mode toggled
+[play] shot: cheats toggled
+[play] waiting for world generation (log line 'Done (') up to 12 min...
+[play] shot: world loading progress (60 s)
+[play] shot: world loading progress (120 s)
+[play] shot: world loading progress (180 s)
+[play] shot: world loading progress (240 s)
+[play] shot: world loading progress (300 s)
+[play] shot: world loading progress (360 s)
+[play] shot: world loading progress (420 s)
+[play] shot: world loading progress (480 s)
+[play] shot: world loading progress (540 s)
+[play] shot: world loading progress (600 s)
+[play] shot: world loading progress (660 s)
+[play] shot: world loading progress (720 s)
+[play] WARN: no 'Done (' line after 12 min; shooting anyway
+[play] shot: in-world (first person)
+[play] shot: in-world (third person)
+[play] shot: wearing mech armor (3rd person front)
+[play] shot: inventory / creative items
+[play] shot: pause menu
+[play] automation finished; screenshots:
+total 3008
+drwxr-xr-x 2 runner runner   4096 Nov  6 13:30 .
+drwxr-xr-x 9 runner runner   4096 Nov  6 13:28 ..
+-rw-r--r-- 1 runner runner 602444 Nov  6 13:10 2026-11-06_13.10.19.png
+-rw-r--r-- 1 runner runner 602570 Nov  6 13:10 2026-11-06_13.10.37.png
+-rw-r--r-- 1 runner runner 639455 Nov  6 13:11 2026-11-06_13.11.07.png
+-rw-r--r-- 1 runner runner  49135 Nov  6 13:12 2026-11-06_13.12.05.png
+-rw-r--r-- 1 runner runner  49135 Nov  6 13:12 2026-11-06_13.12.45.png
+-rw-r--r-- 1 runner runner  44889 Nov  6 13:13 2026-11-06_13.13.01.png
+-rw-r--r-- 1 runner runner  44865 Nov  6 13:13 2026-11-06_13.13.16.png
+-rw-r--r-- 1 runner runner  44865 Nov  6 13:14 2026-11-06_13.14.26.png
+-rw-r--r-- 1 runner runner  44889 Nov  6 13:15 2026-11-06_13.15.33.png
+-rw-r--r-- 1 runner runner  44889 Nov  6 13:16 2026-11-06_13.16.40.png
+-rw-r--r-- 1 runner runner  44865 Nov  6 13:17 2026-11-06_13.17.47.png
+-rw-r--r-- 1 runner runner  44889 Nov  6 13:18 2026-11-06_13.18.54.png
+-rw-r--r-- 1 runner runner  44889 Nov  6 13:20 2026-11-06_13.20.01.png
+-rw-r--r-- 1 runner runner  44865 Nov  6 13:21 2026-11-06_13.21.08.png
+-rw-r--r-- 1 runner runner  44865 Nov  6 13:22 2026-11-06_13.22.15.png
+-rw-r--r-- 1 runner runner  44889 Nov  6 13:23 2026-11-06_13.23.22.png
+-rw-r--r-- 1 runner runner  44889 Nov  6 13:24 2026-11-06_13.24.29.png
+-rw-r--r-- 1 runner runner  44865 Nov  6 13:25 2026-11-06_13.25.36.png
+-rw-r--r-- 1 runner runner  44865 Nov  6 13:26 2026-11-06_13.26.43.png
+-rw-r--r-- 1 runner runner  44889 Nov  6 13:27 2026-11-06_13.27.35.png
+-rw-r--r-- 1 runner runner  44865 Nov  6 13:27 2026-11-06_13.27.52.png
+-rw-r--r-- 1 runner runner 147288 Nov  6 13:29 2026-11-06_13.29.34.png
+-rw-r--r-- 1 runner runner  95855 Nov  6 13:30 2026-11-06_13.30.08.png
+-rw-r--r-- 1 runner runner 147543 Nov  6 13:30 2026-11-06_13.30.27.png
