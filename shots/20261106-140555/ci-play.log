@@ -1,0 +1,24 @@
+[play] waiting for the Minecraft window (up to 25 min, llvmpipe is slow)...
+[play] window id: 2097161
+[play] waiting for 'logged in' (quickPlay world load) up to 14 min...
+[play] shot: world loading progress (60 s)
+[play] shot: in-world (first person)
+[play] shot: in-world (third person back)
+[play] shot: chat feedback for /help (tree diagnostics)
+[play] shot: wearing full mixed mech set (3rd person front)
+[play] shot: hover/jetpack attempt
+[play] shot: creative inventory
+[play] shot: pause menu
+[play] automation finished; screenshots:
+total 1404
+drwxr-xr-x 2 runner runner   4096 Nov  6 14:05 .
+drwxr-xr-x 9 runner runner   4096 Nov  6 13:59 ..
+-rw-r--r-- 1 runner runner 131187 Nov  6 13:59 2026-11-06_13.59.49.png
+-rw-r--r-- 1 runner runner 131187 Nov  6 14:00 2026-11-06_14.00.56.png
+-rw-r--r-- 1 runner runner 129278 Nov  6 14:01 2026-11-06_14.01.15.png
+-rw-r--r-- 1 runner runner 130557 Nov  6 14:01 2026-11-06_14.01.33.png
+-rw-r--r-- 1 runner runner 231656 Nov  6 14:04 2026-11-06_14.04.28.png
+-rw-r--r-- 1 runner runner 231581 Nov  6 14:04 2026-11-06_14.04.50.png
+-rw-r--r-- 1 runner runner 196356 Nov  6 14:05 2026-11-06_14.05.24.png
+-rw-r--r-- 1 runner runner 231566 Nov  6 14:05 2026-11-06_14.05.43.png
+[play] command feedback from game log:
