@@ -23,7 +23,9 @@ shot() {
 }
 
 type_cmd() {
-  key slash
+  # 't' opens chat WITHOUT the slash prefix; the slash key would prefill '/'
+  # and the typed leading slash would double up (//cmd -> server sees /cmd).
+  key t
   xdotool type --clearmodifiers --delay 35 "$1" 2>/dev/null || true
   sleep 1
   key Return
