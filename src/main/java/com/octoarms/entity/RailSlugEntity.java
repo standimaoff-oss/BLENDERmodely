@@ -3,7 +3,6 @@ package com.octoarms.entity;
 import com.octoarms.registry.OctoEntityTypes;
 import com.octoarms.registry.OctoItems;
 import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.world.damagesource.EntityDamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
@@ -12,6 +11,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
+import net.minecraft.world.phys.Vec3;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -70,8 +70,9 @@ public class RailSlugEntity extends ThrowableItemProjectile {
             return;
         }
         Entity owner = getOwner();
-        target.hurt(new EntityDamageSource("octoarms.rail", owner == null ? this : owner), damage);
-        target.push(getDeltaMovement().normalize().scale(0.9D));
+        target.hurt(level().damageSources().mobProjectile(this, owner instanceof LivingEntity living ? living : null), damage);
+        Vec3 knock = getDeltaMovement().normalize().scale(0.9D);
+        target.push(knock.x, knock.y, knock.z);
         target.hurtMarked = true;
     }
 

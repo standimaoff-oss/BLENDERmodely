@@ -51,26 +51,26 @@ public class OctoArmsModel {
                 .texOffs(20, 0).addBox(-2.5F, -2.5F, -2.0F, 5, 5, 4),
                 PartPose.offset(-4.5F, 3.0F, 2.5F));
 
-        cannonLeft = rootDef.addOrReplaceChild("cannon_left", CubeListBuilder.create()
+        PartDefinition cannonLeftDef = rootDef.addOrReplaceChild("cannon_left", CubeListBuilder.create()
                 .texOffs(20, 12).addBox(-2.0F, -2.0F, -3.0F, 4, 4, 6),
                 PartPose.offset(6.5F, 4.0F, 1.0F));
-        cannonLeft.addOrReplaceChild("barrel_left", CubeListBuilder.create()
+        cannonLeftDef.addOrReplaceChild("barrel_left", CubeListBuilder.create()
                 .texOffs(20, 24).addBox(-1.0F, -1.0F, -7.0F, 2, 2, 7),
-                PartPose.ZERO);
-        cannonRight = rootDef.addOrReplaceChild("cannon_right", CubeListBuilder.create()
+                PartPose.offset(0.0F, 0.0F, 0.0F));
+        PartDefinition cannonRightDef = rootDef.addOrReplaceChild("cannon_right", CubeListBuilder.create()
                 .texOffs(20, 12).addBox(-2.0F, -2.0F, -3.0F, 4, 4, 6),
                 PartPose.offset(-6.5F, 4.0F, 1.0F));
-        cannonRight.addOrReplaceChild("barrel_right", CubeListBuilder.create()
+        cannonRightDef.addOrReplaceChild("barrel_right", CubeListBuilder.create()
                 .texOffs(20, 24).addBox(-1.0F, -1.0F, -7.0F, 2, 2, 7),
-                PartPose.ZERO);
+                PartPose.offset(0.0F, 0.0F, 0.0F));
 
-        thruster = rootDef.addOrReplaceChild("thruster", CubeListBuilder.create()
+        PartDefinition thrusterDef = rootDef.addOrReplaceChild("thruster", CubeListBuilder.create()
                 .texOffs(40, 0).addBox(-2.0F, -2.0F, -2.0F, 4, 4, 4),
                 PartPose.offset(0.0F, 6.0F, 4.0F));
-        flame = thruster.addOrReplaceChild("flame", CubeListBuilder.create()
+        thrusterDef.addOrReplaceChild("flame", CubeListBuilder.create()
                 .texOffs(40, 10).addBox(-1.5F, 0.0F, -1.5F, 3, 5, 3),
                 PartPose.offset(0.0F, 2.0F, 0.0F));
-        eyes = rootDef.addOrReplaceChild("eyes", CubeListBuilder.create()
+        rootDef.addOrReplaceChild("eyes", CubeListBuilder.create()
                 .texOffs(40, 20).addBox(-2.0F, -1.0F, -0.5F, 4, 2, 1),
                 PartPose.offset(0.0F, -1.0F, -3.2F));
 
@@ -96,6 +96,11 @@ public class OctoArmsModel {
         }
 
         this.root = rootDef.bake(64, 64);
+        cannonLeft = root.getChild("cannon_left");
+        cannonRight = root.getChild("cannon_right");
+        thruster = root.getChild("thruster");
+        flame = thruster.getChild("flame");
+        eyes = root.getChild("eyes");
         for (int i = 0; i < 8; i++) {
             legs[i] = root.getChild("leg" + i);
             femurs[i] = legs[i].getChild("femur" + i);

@@ -1,6 +1,7 @@
 package com.octoarms.client.renderer;
 
 import com.mojang.blaze3d.vertex.PoseStack;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.client.renderer.entity.EntityRenderer;
@@ -34,7 +35,7 @@ public class OrbRenderer<T extends Entity> extends EntityRenderer<T> {
         poseStack.scale(scale, scale, scale);
         poseStack.mulPose(entityRenderDispatcher.cameraOrientation());
         poseStack.scale(1.0F, -1.0F, 1.0F);
-        entityRenderDispatcher.getItemRenderer().renderStatic(
+        Minecraft.getInstance().getItemRenderer().renderStatic(
                 new ItemStack(item.get()), ItemDisplayContext.GROUND,
                 packedLight, OverlayTexture.NO_OVERLAY, poseStack, buffer, entity.level(), entity.getId());
         poseStack.popPose();

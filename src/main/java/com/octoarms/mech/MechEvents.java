@@ -178,7 +178,7 @@ public class MechEvents {
             return;
         }
         DamageSource source = event.getSource();
-        if (source.isCreativePlayer() || source.isFall()) {
+        if (source.isCreativePlayer()) {
             return;
         }
         Optional<MechSuitTier> full = MechSuit.fullSetTier(player);

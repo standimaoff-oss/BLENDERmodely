@@ -2,6 +2,7 @@ package com.octoarms.client.screen;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.octoarms.menu.AssemblerMenu;
+import com.octoarms.menu.MachineMenu;
 import com.octoarms.menu.ChargerMenu;
 import com.octoarms.menu.PressMenu;
 import net.minecraft.client.gui.GuiGraphics;
@@ -9,12 +10,13 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.ContainerData;
 
 /**
  * Procedurally drawn machine GUI (no bitmap needed): dark steel panel,
  * burn bar, progress bar and PU energy column.
  */
-public class MachineScreen<M extends AbstractContainerMenu> extends AbstractContainerScreen<M> {
+public class MachineScreen<M extends AbstractContainerMenu & MachineMenu> extends AbstractContainerScreen<M> {
 
     public enum Kind {PRESS, CHARGER, ASSEMBLER}
 
@@ -51,12 +53,13 @@ public class MachineScreen<M extends AbstractContainerMenu> extends AbstractCont
         graphics.fill(x + 3, y + 3, x + imageWidth - 3, y + 14, 0xFF262C33);
         graphics.fill(x + 3, y + imageHeight - 96, x + imageWidth - 3, y + imageHeight - 3, 0xFF313841);
 
-        int lit = menu.getData(0);
-        int litTotal = Math.max(1, menu.getData(1));
-        int progress = menu.getData(2);
-        int progressTotal = Math.max(1, menu.getData(3));
-        int energy = menu.getData(4);
-        int energyCap = Math.max(1, menu.getData(5));
+        ContainerData data = menu.machineData();
+        int lit = data.get(0);
+        int litTotal = Math.max(1, data.get(1));
+        int progress = data.get(2);
+        int progressTotal = Math.max(1, data.get(3));
+        int energy = data.get(4);
+        int energyCap = Math.max(1, data.get(5));
 
         switch (kind) {
             case PRESS -> {

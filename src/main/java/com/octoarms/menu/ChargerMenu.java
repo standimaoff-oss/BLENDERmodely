@@ -7,11 +7,12 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.items.SlotItemHandler;
 
-public class ChargerMenu extends AbstractContainerMenu {
+public class ChargerMenu extends AbstractContainerMenu implements MachineMenu {
 
     public static final int IMAGE_WIDTH = 176;
     public static final int IMAGE_HEIGHT = 184;
@@ -45,6 +46,11 @@ public class ChargerMenu extends AbstractContainerMenu {
 
     public MachineBlockEntity blockEntity() {
         return blockEntity;
+    }
+
+    @Override
+    public ContainerData machineData() {
+        return blockEntity.containerData();
     }
 
     @Override

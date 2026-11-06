@@ -111,7 +111,7 @@ public enum MechSuitTier {
     public int defenseFor(ArmorItem.Type type) {
         return switch (type) {
             case HELMET -> defense[0];
-            case CHEST -> defense[1];
+            case CHESTPLATE -> defense[1];
             case LEGGINGS -> defense[2];
             default -> defense[3];
         };
@@ -120,7 +120,7 @@ public enum MechSuitTier {
     public int durabilityFor(ArmorItem.Type type) {
         int base = switch (type) {
             case HELMET -> 13;
-            case CHEST -> 16;
+            case CHESTPLATE -> 16;
             case LEGGINGS -> 15;
             default -> 11;
         };

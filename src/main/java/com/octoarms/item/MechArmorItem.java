@@ -18,7 +18,6 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.client.ForgeHooksClient;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
-import net.minecraftforge.common.ForgeMod;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -41,16 +40,12 @@ public class MechArmorItem extends ArmorItem implements IChargeableItem {
         ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
         builder.putAll(super.getDefaultAttributeModifiers(type.getSlot()));
         UUID uuid = UUID.nameUUIDFromBytes(("octoarms:" + tier.id + ":" + type).getBytes());
-        if (type == ArmorItem.Type.CHEST) {
+        if (type == ArmorItem.Type.CHESTPLATE) {
             builder.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(uuid, "Mech servo strength",
                     tier.attackBonus, AttributeModifier.Operation.ADDITION));
         }
         builder.put(Attributes.MOVEMENT_SPEED, new AttributeModifier(uuid, "Mech servo speed",
                 tier.speedBonus, AttributeModifier.Operation.MULTIPLY_TOTAL));
-        if (tier.canClimb) {
-            builder.put(ForgeMod.REACH_DISTANCE.get(), new AttributeModifier(uuid, "Octo reach",
-                    1.0D, AttributeModifier.Operation.ADDITION));
-        }
         this.suitModifiers = builder.build();
     }
 

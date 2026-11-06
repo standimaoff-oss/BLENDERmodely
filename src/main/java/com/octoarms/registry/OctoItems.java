@@ -60,11 +60,11 @@ public final class OctoItems {
             ARMOR.put(tier.id + "_helmet", ITEMS.register(tier.id + "_helmet",
                     () -> new MechArmorItem(tier, ArmorItem.Type.HELMET)));
             ARMOR.put(tier.id + "_chestplate", ITEMS.register(tier.id + "_chestplate",
-                    () -> new MechArmorItem(tier, ArmorItem.Type.CHEST)));
+                    () -> new MechArmorItem(tier, ArmorItem.Type.CHESTPLATE)));
             ARMOR.put(tier.id + "_leggings", ITEMS.register(tier.id + "_leggings",
                     () -> new MechArmorItem(tier, ArmorItem.Type.LEGGINGS)));
             ARMOR.put(tier.id + "_boots", ITEMS.register(tier.id + "_boots",
-                    () -> new MechArmorItem(tier, ArmorItem.Type.FEET)));
+                    () -> new MechArmorItem(tier, ArmorItem.Type.BOOTS)));
         }
     }
 

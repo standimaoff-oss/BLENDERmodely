@@ -3,7 +3,6 @@ package com.octoarms.entity;
 import com.octoarms.registry.OctoEntityTypes;
 import com.octoarms.registry.OctoItems;
 import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.world.damagesource.EntityDamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
@@ -60,7 +59,7 @@ public class PlasmaBoltEntity extends ThrowableItemProjectile {
         super.onHitEntity(hit);
         Entity target = hit.getEntity();
         Entity owner = getOwner();
-        target.hurt(new EntityDamageSource("octoarms.plasma", owner == null ? this : owner), damage);
+        target.hurt(level().damageSources().mobProjectile(this, owner instanceof LivingEntity living ? living : null), damage);
         target.setRemainingFireTicks(40);
         detonate();
     }

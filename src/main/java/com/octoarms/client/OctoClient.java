@@ -8,7 +8,7 @@ import com.octoarms.registry.OctoEntityTypes;
 import com.octoarms.registry.OctoItems;
 import com.octoarms.registry.OctoMenuTypes;
 import net.minecraft.client.gui.screens.MenuScreens;
-import net.minecraft.client.renderer.entity.PlayerRenderer;
+import net.minecraft.client.renderer.entity.player.PlayerRenderer;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.client.event.RegisterGuiOverlaysEvent;
@@ -26,9 +26,12 @@ public final class OctoClient {
     @SubscribeEvent
     public static void onClientSetup(FMLClientSetupEvent event) {
         event.enqueueWork(() -> {
-            MenuScreens.register(OctoMenuTypes.PRESS.get(), MachineScreen::press);
-            MenuScreens.register(OctoMenuTypes.CHARGER.get(), MachineScreen::charger);
-            MenuScreens.register(OctoMenuTypes.ASSEMBLER.get(), MachineScreen::assembler);
+            MenuScreens.register(OctoMenuTypes.PRESS.get(),
+                    (menu, inv, title) -> MachineScreen.press(menu, inv, title));
+            MenuScreens.register(OctoMenuTypes.CHARGER.get(),
+                    (menu, inv, title) -> MachineScreen.charger(menu, inv, title));
+            MenuScreens.register(OctoMenuTypes.ASSEMBLER.get(),
+                    (menu, inv, title) -> MachineScreen.assembler(menu, inv, title));
         });
     }
 
