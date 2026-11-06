@@ -1,0 +1,29 @@
+[play] waiting for the Minecraft window (up to 25 min, llvmpipe is slow)...
+[play] window id: 2097161
+[play] shot: title screen
+[play] shot: title screen (clean)
+[play] shot: world list
+[play] shot: create-world screen
+[play] shot: create-world, game mode toggled (hopefully creative)
+[play] shot: create-world, cheats toggled (hopefully on)
+[play] waiting 150 s for world generation and chunk loads...
+[play] shot: in-world (first person)
+[play] shot: in-world (third person)
+[play] shot: wearing spider mech chestplate + diamond helmet (3rd person)
+[play] shot: inventory / creative items
+[play] shot: pause menu
+[play] automation finished; screenshots:
+total 2944
+drwxr-xr-x 2 runner runner   4096 Nov  6 12:35 .
+drwxr-xr-x 9 runner runner   4096 Nov  6 12:28 ..
+-rw-r--r-- 1 runner runner 477074 Nov  6 12:28 2026-11-06_12.28.22.png
+-rw-r--r-- 1 runner runner 528389 Nov  6 12:28 2026-11-06_12.28.34.png
+-rw-r--r-- 1 runner runner 512012 Nov  6 12:29 2026-11-06_12.29.12.png
+-rw-r--r-- 1 runner runner 629002 Nov  6 12:29 2026-11-06_12.29.40.png
+-rw-r--r-- 1 runner runner  46242 Nov  6 12:29 2026-11-06_12.29.55.png
+-rw-r--r-- 1 runner runner  45615 Nov  6 12:30 2026-11-06_12.30.14.png
+-rw-r--r-- 1 runner runner  46998 Nov  6 12:32 2026-11-06_12.32.52.png
+-rw-r--r-- 1 runner runner  46998 Nov  6 12:33 2026-11-06_12.33.07.png
+-rw-r--r-- 1 runner runner  46998 Nov  6 12:34 2026-11-06_12.34.35.png
+-rw-r--r-- 1 runner runner  46998 Nov  6 12:35 2026-11-06_12.35.03.png
+-rw-r--r-- 1 runner runner 552868 Nov  6 12:35 2026-11-06_12.35.17.png
