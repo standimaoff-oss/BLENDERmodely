@@ -43,7 +43,9 @@ minecraft {
                  '--uuid', 'd0f6d3a1-0d9c-4a01-9b06-4c0b2f2d5a1e',
                  '--accessToken', '0',
                  '--userType', 'msa',
-                 '--versionType', 'release'
+                 '--versionType', 'release',
+                 // jump straight into the pre-made test world (cheats + creative)
+                 '--quickPlaySingleplayer', 'OctoTest'
         }
 
         server {
