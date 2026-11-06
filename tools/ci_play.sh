@@ -1,12 +1,17 @@
 #!/usr/bin/env bash
-# Headless in-game smoke test driver (iteration 2).
+# Headless in-game smoke test driver (iteration 3: mouse-driven).
 # Requires: Xvfb on DISPLAY (default :99), xdotool, and a Minecraft client
 # starting up in the background (gradlew runClient).
 #
-# Title -> Mods list -> Singleplayer -> Create New World (Creative + cheats,
-# best effort) -> wait for the integrated server log line "Done (" -> spawn,
-# equip mech armor via commands, F2 screenshots after every step.
-# No Escape presses while the world is loading (that aborts generation).
+# All menu navigation is done with xdotool MOUSE CLICKS at fixed physical
+# coordinates (1280x720, guiScale 2) measured from earlier CI screenshots:
+#   onboarding Continue      (640, 666)
+#   title Singleplayer       (640, 354)   title Mods (455, 492)
+#   mod list Done            (640, 664)
+#   world list Create        (798, 636)
+#   create screen: GameMode  (640, 264), Allow Cheats (640, 434),
+#                  Create New World (396, 666)
+# Keyboard is only used for F2 screenshots and chat commands.
 set -u
 export DISPLAY="${DISPLAY:-:99}"
 SHOT_DIR="run/screenshots"
@@ -15,8 +20,14 @@ LOG="ci-play.log"
 
 log() { echo "[play] $*" | tee -a "$LOG"; }
 
+click() {
+  xdotool mousemove --sync "$1" "$2" 2>/dev/null || true
+  sleep 1
+  xdotool click --clearmodifiers 1 2>/dev/null || true
+  sleep 2
+}
+
 key() {
-  xdotool windowfocus "$WIN" 2>/dev/null || true
   xdotool key --clearmodifiers "$@" 2>/dev/null || true
   sleep 2
 }
@@ -28,7 +39,6 @@ shot() {
 
 type_cmd() {
   key slash
-  xdotool windowfocus "$WIN" 2>/dev/null || true
   xdotool type --clearmodifiers --delay 35 "$1" 2>/dev/null || true
   sleep 1
   key Return
@@ -50,40 +60,42 @@ log "window id: $WIN"
 xdotool windowactivate --sync "$WIN" 2>/dev/null || true
 xdotool windowfocus "$WIN" 2>/dev/null || true
 
-# --- title screen (llvmpipe needs ~90 s to stabilise) ---
-sleep 90
+sleep 90   # llvmpipe title-screen stabilisation
 shot; log "shot: title screen"
 
+# dismiss onboarding dialog if it is up (harmless click on title otherwise)
+click 640 666
+sleep 8
+shot; log "shot: after onboarding dismiss"
+
 # --- mods list (proves the mod is loaded in-game) ---
-key Tab; sleep 3      # -> Multiplayer
-key Tab; sleep 3      # -> Mods
-key Return; sleep 20
+click 455 492
+sleep 20
 shot; log "shot: mods list"
-key Escape; sleep 20  # back to title (safe here)
+click 640 664   # Done
+sleep 15
 
-# --- Singleplayer -> world list ---
-key Return; sleep 45
+# --- Singleplayer -> world list -> create screen ---
+click 640 354
+sleep 30
 shot; log "shot: world list"
-
-# --- Create New World screen ---
-key Return; sleep 45
+click 798 636   # Create New World
+sleep 30
 shot; log "shot: create-world screen"
 
-# name field focused; Tab -> Game Mode; Enter -> Creative
-key Tab; sleep 3
-key Return; sleep 5
-shot; log "shot: create-world, game mode toggled"
-# Tab -> Difficulty, Tab -> Allow Cheats; Enter -> ON
-key Tab; sleep 3
-key Tab; sleep 3
-key Return; sleep 5
-shot; log "shot: create-world, cheats toggled"
+# --- creative + cheats ---
+click 640 264   # Game Mode: Survival -> Creative
+sleep 5
+shot; log "shot: game mode toggled"
+click 640 434   # Allow Cheats: OFF -> ON
+sleep 5
+shot; log "shot: cheats toggled"
 
-# --- create the world; wait for the server 'Done (' line in the log ---
-key Return
-log "waiting for world generation (log line 'Done (') up to 10 min..."
+# --- create; wait for the integrated server 'Done (' log line ---
+click 396 666
+log "waiting for world generation (log line 'Done (') up to 12 min..."
 READY=0
-for i in $(seq 1 60); do
+for i in $(seq 1 72); do
   if grep -q "Done (" "$GAME_LOG" 2>/dev/null; then READY=1; break; fi
   sleep 10
   if [ $((i % 6)) -eq 0 ]; then
@@ -91,16 +103,15 @@ for i in $(seq 1 60); do
   fi
 done
 if [ "$READY" -ne 1 ]; then
-  log "WARN: no 'Done (' line after 10 min; shooting anyway"
+  log "WARN: no 'Done (' line after 12 min; shooting anyway"
 fi
-sleep 45   # let the first frames render on llvmpipe
+sleep 45
 shot; log "shot: in-world (first person)"
 
-# --- third person ---
 key F5; sleep 8
 shot; log "shot: in-world (third person)"
 
-# --- commands (only effective with cheats; harmless otherwise) ---
+# --- commands (cheats should be on now) ---
 type_cmd "/gamemode creative"
 type_cmd "/give @s octoarms:spider_mech_chestplate 1"
 type_cmd "/give @s octoarms:diamond_mech_helmet 1"
@@ -109,14 +120,12 @@ type_cmd "/give @s octoarms:railgun 1"
 type_cmd "/item replace entity @s armor.chest with octoarms:spider_mech_chestplate"
 type_cmd "/item replace entity @s armor.head with octoarms:diamond_mech_helmet"
 sleep 10
-key F5; sleep 6   # front view so the mech rig shows
+key F5; sleep 6
 shot; log "shot: wearing mech armor (3rd person front)"
 
-# --- inventory / creative items ---
 key e; sleep 25
 shot; log "shot: inventory / creative items"
 
-# --- pause menu (safe now, world exists) ---
 key Escape; sleep 10
 shot; log "shot: pause menu"
 
