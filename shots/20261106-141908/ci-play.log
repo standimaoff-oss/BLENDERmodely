@@ -1,0 +1,32 @@
+[play] waiting for the Minecraft window (up to 25 min, llvmpipe is slow)...
+[play] window id: 2097161
+[play] waiting for 'logged in' (quickPlay world load) up to 14 min...
+[play] shot: world loading progress (60 s)
+[play] shot: in-world (first person)
+[play] shot: in-world (third person back)
+[play] shot: chat feedback for /help (tree diagnostics)
+[play] shot: wearing full mixed mech set (3rd person front)
+[play] shot: hover/jetpack attempt
+[play] shot: creative inventory
+[play] shot: pause menu
+[play] automation finished; screenshots:
+total 1208
+drwxr-xr-x 2 runner runner   4096 Nov  6 14:18 .
+drwxr-xr-x 9 runner runner   4096 Nov  6 14:13 ..
+-rw-r--r-- 1 runner runner 113410 Nov  6 14:13 2026-11-06_14.13.02.png
+-rw-r--r-- 1 runner runner 113410 Nov  6 14:14 2026-11-06_14.14.09.png
+-rw-r--r-- 1 runner runner  65697 Nov  6 14:14 2026-11-06_14.14.28.png
+-rw-r--r-- 1 runner runner  76043 Nov  6 14:14 2026-11-06_14.14.46.png
+-rw-r--r-- 1 runner runner 217737 Nov  6 14:17 2026-11-06_14.17.42.png
+-rw-r--r-- 1 runner runner 217878 Nov  6 14:18 2026-11-06_14.18.03.png
+-rw-r--r-- 1 runner runner 187722 Nov  6 14:18 2026-11-06_14.18.37.png
+-rw-r--r-- 1 runner runner 217951 Nov  6 14:18 2026-11-06_14.18.56.png
+[play] command feedback from game log:
+[06Nov2026 14:16:31.934] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [OctoTester: Replaced a slot on OctoTester with [Spider Mech Chestplate «Octo Arms»]]
+[06Nov2026 14:16:31.953] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Replaced a slot on OctoTester with [Spider Mech Chestplate «Octo Arms»]
+[06Nov2026 14:16:44.397] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [OctoTester: Replaced a slot on OctoTester with [Diamond Mech Helmet «Vanguard»]]
+[06Nov2026 14:16:44.398] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Replaced a slot on OctoTester with [Diamond Mech Helmet «Vanguard»]
+[06Nov2026 14:16:56.923] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [OctoTester: Replaced a slot on OctoTester with [Netherite Mech Leggings «Titan»]]
+[06Nov2026 14:16:56.934] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Replaced a slot on OctoTester with [Netherite Mech Leggings «Titan»]
+[06Nov2026 14:17:09.254] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [OctoTester: Replaced a slot on OctoTester with [Iron Mech Boots «Legionary»]]
+[06Nov2026 14:17:09.255] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Replaced a slot on OctoTester with [Iron Mech Boots «Legionary»]
