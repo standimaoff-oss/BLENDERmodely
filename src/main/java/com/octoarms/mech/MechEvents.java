@@ -12,6 +12,7 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.phys.Vec3;
@@ -46,25 +47,23 @@ public class MechEvents {
     }
 
     private void serverTick(Player player) {
-        Optional<MechSuitTier> worn = MechSuit.wornTier(player);
-        if (worn.isEmpty()) {
-            return;
-        }
-        MechSuitTier tier = worn.get();
+        // CHESTPLATE = power core: cells, sprint servos, hover thrusters, cling.
+        Optional<MechSuitTier> chest = MechSuit.wornTier(player);
 
         // power cells in the pockets feed the suit
-        if (OctoConfig.CELLS_FEED_INVENTORY.get() && player.tickCount % 4 == 0) {
+        if (chest.isPresent() && OctoConfig.CELLS_FEED_INVENTORY.get() && player.tickCount % 4 == 0) {
             MechSuit.feedFromCells(player, 40);
         }
 
         // servo-sprint drain
-        if (player.isSprinting() && player.tickCount % 4 == 0) {
-            int cost = (int) Math.max(1, tier.costSprint * OctoConfig.SPRINT_COST_MULTIPLIER.get());
+        if (chest.isPresent() && player.isSprinting() && player.tickCount % 4 == 0) {
+            int cost = (int) Math.max(1, chest.get().costSprint * OctoConfig.SPRINT_COST_MULTIPLIER.get());
             MechSuit.drain(player, cost);
         }
 
         // hover thrusters
-        if (OctoConfig.ALLOW_FLIGHT.get() && tier.canFly) {
+        if (chest.isPresent() && OctoConfig.ALLOW_FLIGHT.get() && chest.get().canFly) {
+            MechSuitTier tier = chest.get();
             boolean hover = MechSuit.flag(player, MechSuit.KEY_HOVER, false);
             boolean powered = MechSuit.suitFraction(player) > 0.01F;
             boolean allowed = hover && powered && !player.isCreative() && !player.isSpectator();
@@ -83,8 +82,9 @@ public class MechEvents {
         }
 
         // full-set passive bonuses
-        if (player.tickCount % 60 == 0 && MechSuit.isFullSet(player, tier) && MechSuit.suitFraction(player) > 0.02F) {
-            switch (tier) {
+        if (chest.isPresent() && player.tickCount % 60 == 0 && MechSuit.isFullSet(player, chest.get())
+                && MechSuit.suitFraction(player) > 0.02F) {
+            switch (chest.get()) {
                 case COPPER -> player.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 140, 0, true, false));
                 case IRON -> player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 140, 0, true, false));
                 case GOLD -> player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 140, 0, true, false));
@@ -100,16 +100,27 @@ public class MechEvents {
             }
         }
 
-        // visor night vision
+        // HELMET = visor: night vision while the visor key is on
         if (player.tickCount % 80 == 0) {
-            boolean visor = MechSuit.flag(player, MechSuit.KEY_VISOR, false)
-                    && tier.visorNightVision
+            boolean visorKey = MechSuit.flag(player, MechSuit.KEY_VISOR, false);
+            Optional<MechSuitTier> head = MechSuit.tierInSlot(player, EquipmentSlot.HEAD);
+            boolean visor = visorKey
+                    && head.isPresent()
+                    && head.get().visorNightVision
                     && MechSuit.suitFraction(player) > 0.01F;
             if (visor) {
                 player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 320, 0, true, false));
-            } else if (player.hasEffect(MobEffects.NIGHT_VISION)
-                    && MechSuit.flag(player, MechSuit.KEY_VISOR, false)) {
+            } else if (visorKey && player.hasEffect(MobEffects.NIGHT_VISION)) {
                 player.removeEffect(MobEffects.NIGHT_VISION);
+            }
+        }
+
+        // LEGGINGS = servo stride: speed scales with the leggings' own tier
+        if (player.tickCount % 60 == 0) {
+            Optional<MechSuitTier> legs = MechSuit.tierInSlot(player, EquipmentSlot.LEGS);
+            if (legs.isPresent() && MechSuit.suitFraction(player) > 0.01F) {
+                int amp = Math.round(legs.get().speedBonus * 12.0F);
+                player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 140, amp, true, false));
             }
         }
     }
@@ -119,13 +130,13 @@ public class MechEvents {
         if (!(event.getEntity() instanceof Player player)) {
             return;
         }
-        Optional<MechSuitTier> worn = MechSuit.wornTier(player);
-        if (worn.isEmpty() || !MechSuit.canPay(player, worn.get().costJump)) {
-            return;
-        }
-        MechSuitTier tier = worn.get();
-
+        // wall-jump belongs to the chestplate (cling system)
+        Optional<MechSuitTier> chest = MechSuit.wornTier(player);
         if (ClimbHandler.isClimbing(player)) {
+            if (chest.isEmpty() || !MechSuit.canPay(player, chest.get().costJump)) {
+                return;
+            }
+            MechSuitTier tier = chest.get();
             Vec3 impulse = ClimbHandler.wallJumpImpulse(player);
             if (impulse != null) {
                 player.setDeltaMovement(impulse);
@@ -137,6 +148,13 @@ public class MechEvents {
             }
             return;
         }
+
+        // BOOTS = jump servos: boost scales with the boots' own tier
+        Optional<MechSuitTier> boots = MechSuit.tierInSlot(player, EquipmentSlot.FEET);
+        if (boots.isEmpty() || !MechSuit.canPay(player, boots.get().costJump)) {
+            return;
+        }
+        MechSuitTier tier = boots.get();
 
         Vec3 motion = player.getDeltaMovement();
         if (motion.y > 0.0D) {
@@ -153,8 +171,9 @@ public class MechEvents {
         if (!(event.getEntity() instanceof Player player)) {
             return;
         }
-        Optional<MechSuitTier> worn = MechSuit.wornTier(player);
-        if (worn.isEmpty()) {
+        // BOOTS = landing dampers
+        Optional<MechSuitTier> boots = MechSuit.tierInSlot(player, EquipmentSlot.FEET);
+        if (boots.isEmpty()) {
             return;
         }
         float distance = event.getDistance();

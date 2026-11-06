@@ -45,6 +45,15 @@ public final class MechSuit {
     }
 
     /** True when all four slots hold mech pieces of the same tier. */
+    /** Tier of the mech piece worn in one specific slot (empty for vanilla gear). */
+    public static Optional<MechSuitTier> tierInSlot(Player player, EquipmentSlot slot) {
+        ItemStack stack = player.getItemBySlot(slot);
+        if (stack.getItem() instanceof MechArmorItem armor) {
+            return Optional.of(armor.tier());
+        }
+        return Optional.empty();
+    }
+
     public static boolean isFullSet(Player player, MechSuitTier tier) {
         for (EquipmentSlot slot : new EquipmentSlot[]{EquipmentSlot.HEAD, EquipmentSlot.CHEST,
                 EquipmentSlot.LEGS, EquipmentSlot.FEET}) {

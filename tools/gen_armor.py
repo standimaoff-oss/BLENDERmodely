@@ -13,7 +13,7 @@ from pixel import Canvas, hexcol, lighten, darken, mix, paint_cube
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 TEX_OUT = os.path.join(ROOT, "src", "main", "resources", "assets", C.MODID, "textures", "models", "armor")
 JAVA_OUT = os.path.join(ROOT, "src", "main", "java", "com", "octoarms", "client", "model", "ArmorSpecs.java")
-TEX_SIZE = 128
+TEX_SIZE = 256
 
 # part pivots must match the vanilla player rig so poses carry over
 PIVOTS = {
@@ -39,9 +39,9 @@ def base_boxes(defl=0.0):
     d = defl
     return [
         # head
-        box("head", (9, 9, 9), (-4.5, -8.5, -4.5), "plate"),
-        box("head", (8, 3, 1), (-4.0, -6.6, -5.1), "visor"),
-        box("head", (10, 2, 10), (-5.0, -1.4, -5.0), "dark"),          # neck seal
+        box("head", (10, 10, 10), (-5.0, -9.0, -5.0), "plate"),
+        box("head", (9, 3, 1), (-4.5, -7.0, -5.6), "visor"),
+        box("head", (11, 2, 11), (-5.5, -1.2, -5.5), "dark"),          # neck seal
         # torso
         box("body", (9, 13, 5), (-4.5, -0.6, -2.5), "plate"),
         box("body", (3, 3, 1), (-1.5, 3.2, -3.2), "glow"),             # reactor core
@@ -56,12 +56,20 @@ def base_boxes(defl=0.0):
         box("left_arm", (5, 7, 5), (-1.8, 1.6, -2.5), "plate"),
         box("left_arm", (6, 6, 6), (-2.4, 7.6, -3.0), "dark"),
         # legs
-        box("right_leg", (5, 7, 5), (-2.7, -0.6, -2.5), "plate"),
-        box("right_leg", (6, 6, 6), (-3.1, 5.8, -3.0), "accent"),      # shin plate
-        box("right_leg", (6, 3, 8), (-3.1, 10.2, -3.6), "dark"),       # boot
-        box("left_leg", (5, 7, 5), (-2.3, -0.6, -2.5), "plate"),
-        box("left_leg", (6, 6, 6), (-2.9, 5.8, -3.0), "accent"),
-        box("left_leg", (6, 3, 8), (-2.9, 10.2, -3.6), "dark"),
+        box("right_leg", (6, 7, 6), (-3.7, -1.2, -3.2), "plate"),      # thigh
+        box("left_leg", (6, 7, 6), (-2.3, -1.2, -3.2), "plate"),
+        box("right_leg", (3, 3, 3), (-3.0, 4.6, -4.6), "accent"),      # knee piston
+        box("left_leg", (3, 3, 3), (0.0, 4.6, -4.6), "accent"),
+        box("right_leg", (6, 7, 6), (-3.7, 5.2, -3.2), "accent"),      # shin guard
+        box("left_leg", (6, 7, 6), (-2.3, 5.2, -3.2), "accent"),
+        box("right_leg", (1, 5, 4), (-4.5, 5.6, -2.0), "dark"),        # shin vent out
+        box("left_leg", (1, 5, 4), (3.5, 5.6, -2.0), "dark"),
+        box("right_leg", (7, 3, 9), (-4.0, 9.0, -5.0), "dark"),        # boot
+        box("left_leg", (7, 3, 9), (-3.0, 9.0, -5.0), "dark"),
+        box("right_leg", (7, 2, 2), (-4.0, 10.0, -6.4), "accent"),     # toe plate
+        box("left_leg", (7, 2, 2), (-3.0, 10.0, -6.4), "accent"),
+        box("right_leg", (2, 2, 2), (-3.4, 10.0, 3.6), "dark"),        # heel actuator
+        box("left_leg", (2, 2, 2), (-0.5, 10.0, 3.6), "dark"),
     ]
 
 
@@ -102,8 +110,10 @@ TIER_EXTRA = {
         box("body", (4, 8, 4), (2.8, 0.0, 3.0), "dark"),
         box("body", (3, 2, 3), (-6.2, -2.4, 3.0), "glow"),
         box("body", (3, 2, 3), (3.2, -2.4, 3.0), "glow"),
-        box("right_leg", (7, 4, 7), (-3.8, 4.6, -3.5), "plate"),
-        box("left_leg", (7, 4, 7), (-3.2, 4.6, -3.5), "plate"),
+        box("right_leg", (6, 4, 6), (-3.7, 4.4, -3.4), "plate"),       # knee cap
+        box("left_leg", (6, 4, 6), (-2.3, 4.4, -3.4), "plate"),
+        box("right_leg", (2, 6, 2), (-5.4, 2.0, -1.0), "dark"),        # thigh hydraulics
+        box("left_leg", (2, 6, 2), (3.4, 2.0, -1.0), "dark"),
     ],
     "spider_mech": [
         box("head", (9, 3, 3), (-4.5, -2.6, -5.6), "dark"),            # fang housing
@@ -121,6 +131,10 @@ TIER_EXTRA = {
         box("body", (3, 3, 3), (3.6, 3.0, 2.6), "dark"),               # octo-arm mount R
         box("right_arm", (5, 5, 5), (-3.4, 8.0, -2.8), "accent"),      # claw gauntlet
         box("left_arm", (5, 5, 5), (-1.6, 8.0, -2.8), "accent"),
+        box("right_leg", (2, 6, 2), (-5.4, 1.6, -1.0), "dark"),        # leg hydraulics
+        box("left_leg", (2, 6, 2), (3.4, 1.6, -1.0), "dark"),
+        box("right_leg", (8, 2, 8), (-4.4, 8.6, -4.4), "accent"),      # wide stance plate
+        box("left_leg", (8, 2, 8), (-3.6, 8.6, -4.4), "accent"),
     ],
 }
 
@@ -162,7 +176,10 @@ def pack_uvs(boxes):
         b["uvsize"] = (need_w, need_h)
         x += need_w + 2
         row_h = max(row_h, need_h)
-    return y + row_h
+    bottom = y + row_h
+    if bottom > TEX_SIZE:
+        raise SystemExit(f"[armor] FATAL: uv layout overflows {TEX_SIZE}px (bottom={bottom})")
+    return bottom
 
 
 # --------------------------------------------------------------------------- #
