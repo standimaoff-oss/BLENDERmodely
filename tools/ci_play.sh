@@ -98,10 +98,10 @@ sleep 2
 # --- close-up: spider suit on an armor stand at (+2,+2), aim with /tp ---
 type_cmd "/summon minecraft:armor_stand ~2 ~ ~2 {ShowArms:1b,NoBasePlate:1b}"
 sleep 3
-type_cmd "/item replace entity @e[type=minecraft:armor_stand,sort=nearest,limit=1] slot.armor.head with octoarms:spider_mech_helmet"
-type_cmd "/item replace entity @e[type=minecraft:armor_stand,sort=nearest,limit=1] slot.armor.chest with octoarms:spider_mech_chestplate"
-type_cmd "/item replace entity @e[type=minecraft:armor_stand,sort=nearest,limit=1] slot.armor.legs with octoarms:spider_mech_leggings"
-type_cmd "/item replace entity @e[type=minecraft:armor_stand,sort=nearest,limit=1] slot.armor.feet with octoarms:spider_mech_boots"
+type_cmd "/item replace entity @e[type=minecraft:armor_stand,sort=nearest,limit=1] armor.head with octoarms:spider_mech_helmet"
+type_cmd "/item replace entity @e[type=minecraft:armor_stand,sort=nearest,limit=1] armor.chest with octoarms:spider_mech_chestplate"
+type_cmd "/item replace entity @e[type=minecraft:armor_stand,sort=nearest,limit=1] armor.legs with octoarms:spider_mech_leggings"
+type_cmd "/item replace entity @e[type=minecraft:armor_stand,sort=nearest,limit=1] armor.feet with octoarms:spider_mech_boots"
 type_cmd "/tp @s ~ ~ ~ -45 8"
 sleep 5
 shot; log "shot: armor-stand close-up of spider mech (huge legs)"
