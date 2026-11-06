@@ -101,3 +101,22 @@ python3 tools/generate.py
 ## License
 
 MIT — see [LICENSE](LICENSE).
+
+## In-game smoke test (headless Minecraft)
+
+`.github/workflows/ingame.yml` boots the real client on a CI runner:
+Xvfb (`:99`, 1280x720x24) + Mesa llvmpipe software GL + `xvfb-run`-style
+`gradlew runClient` with offline login args, then `tools/ci_play.sh` drives
+the menus with `xdotool` (title -> Mods -> Create World -> spawn -> equip
+mech armor via commands) and presses F2 after every step.
+Every run commits its screenshots and client log to `shots/<timestamp>/`
+(`[skip ci]`), so the gallery grows with the mod:
+
+* `shots/preview/*.png` - offline isometric model renders
+  (`tools/render_preview.py`, pure Pillow: real textures, MC cube UV unwrap).
+* `shots/*/` - real in-game screenshots + `latest.log` + `ci-play.log`.
+* `ci-debug/client-run.log` - full console of the last client run.
+
+`tools/validate_jar.py` is the offline counterpart: it checks every JSON in
+the jar, model/texture/blockstate references, lang key parity (en/ru),
+recipe id/tag resolution and armor texture presence without a JVM.
