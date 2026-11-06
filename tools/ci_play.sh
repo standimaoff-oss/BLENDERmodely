@@ -87,10 +87,28 @@ sleep 15
 key F5; sleep 8
 shot; log "shot: wearing full mixed mech set (3rd person front)"
 
+# --- close-up: spider suit on an armor stand 2.5 blocks ahead, first person ---
+key F5; sleep 4
+type_cmd "/summon minecraft:armor_stand ^ ^-1.62 ^2.5 {ShowArms:1b,NoBasePlate:1b}"
+sleep 3
+type_cmd "/item replace entity @e[type=minecraft:armor_stand,sort=nearest,limit=1] slot.armor.head with octoarms:spider_mech_helmet"
+type_cmd "/item replace entity @e[type=minecraft:armor_stand,sort=nearest,limit=1] slot.armor.chest with octoarms:spider_mech_chestplate"
+type_cmd "/item replace entity @e[type=minecraft:armor_stand,sort=nearest,limit=1] slot.armor.legs with octoarms:spider_mech_leggings"
+type_cmd "/item replace entity @e[type=minecraft:armor_stand,sort=nearest,limit=1] slot.armor.feet with octoarms:spider_mech_boots"
+sleep 6
+shot; log "shot: first-person close-up of spider mech on armor stand (huge legs)"
+
 # --- flight + cling showcase: double jump starts hover on suits that can ---
+# spider core cannot fly; borrow a diamond core for the hover demo, then swap back
+type_cmd "/item replace entity @s armor.chest with octoarms:diamond_mech_chestplate"
+sleep 3
+key F5; sleep 4
+key F5; sleep 6
 key space; sleep 2
 key space; sleep 8
-shot; log "shot: hover/jetpack attempt"
+shot; log "shot: hover/jetpack attempt (diamond core)"
+type_cmd "/item replace entity @s armor.chest with octoarms:spider_mech_chestplate"
+sleep 2
 
 # --- creative inventory (shows item grids; mod tab reachable by clicks later) ---
 key e; sleep 25
