@@ -1,0 +1,41 @@
+[play] waiting for the Minecraft window (up to 25 min, llvmpipe is slow)...
+[play] window id: 2097161
+[play] waiting for 'logged in' (quickPlay world load) up to 14 min...
+[play] shot: in-world (first person)
+[play] shot: in-world (third person back)
+[play] shot: chat feedback for /help (tree diagnostics)
+[play] shot: wearing full mixed mech set (3rd person front)
+[play] shot: first-person view of own mech boots/legs
+[play] shot: armor-stand close-up of spider mech (huge legs)
+[play] shot: hover/jetpack attempt (diamond core)
+[play] shot: creative inventory
+[play] shot: pause menu
+[play] automation finished; screenshots:
+total 1456
+drwxr-xr-x 2 runner runner   4096 Nov  6 15:30 .
+drwxr-xr-x 9 runner runner   4096 Nov  6 15:22 ..
+-rw-r--r-- 1 runner runner 127013 Nov  6 15:22 2026-11-06_15.22.47.png
+-rw-r--r-- 1 runner runner 121080 Nov  6 15:23 2026-11-06_15.23.06.png
+-rw-r--r-- 1 runner runner 124727 Nov  6 15:23 2026-11-06_15.23.24.png
+-rw-r--r-- 1 runner runner 245190 Nov  6 15:26 2026-11-06_15.26.42.png
+-rw-r--r-- 1 runner runner 202626 Nov  6 15:27 2026-11-06_15.27.10.png
+-rw-r--r-- 1 runner runner 197249 Nov  6 15:28 2026-11-06_15.28.55.png
+-rw-r--r-- 1 runner runner 137019 Nov  6 15:29 2026-11-06_15.29.46.png
+-rw-r--r-- 1 runner runner 150341 Nov  6 15:30 2026-11-06_15.30.34.png
+-rw-r--r-- 1 runner runner 156794 Nov  6 15:30 2026-11-06_15.30.54.png
+[play] command feedback from game log:
+[06Nov2026 15:25:57.553] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Replaced a slot on OctoTester with [Spider Mech Leggings «Octo Arms»]
+[06Nov2026 15:26:09.866] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [OctoTester: Replaced a slot on OctoTester with [Spider Mech Boots «Octo Arms»]]
+[06Nov2026 15:26:09.868] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Replaced a slot on OctoTester with [Spider Mech Boots «Octo Arms»]
+[06Nov2026 15:27:51.486] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [OctoTester: Replaced a slot on Armor Stand with [Spider Mech Helmet «Octo Arms»]]
+[06Nov2026 15:27:51.486] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Replaced a slot on Armor Stand with [Spider Mech Helmet «Octo Arms»]
+[06Nov2026 15:28:04.901] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [OctoTester: Replaced a slot on Armor Stand with [Spider Mech Chestplate «Octo Arms»]]
+[06Nov2026 15:28:04.903] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Replaced a slot on Armor Stand with [Spider Mech Chestplate «Octo Arms»]
+[06Nov2026 15:28:18.227] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [OctoTester: Replaced a slot on Armor Stand with [Spider Mech Leggings «Octo Arms»]]
+[06Nov2026 15:28:18.237] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Replaced a slot on Armor Stand with [Spider Mech Leggings «Octo Arms»]
+[06Nov2026 15:28:31.507] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [OctoTester: Replaced a slot on Armor Stand with [Spider Mech Boots «Octo Arms»]]
+[06Nov2026 15:28:31.510] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Replaced a slot on Armor Stand with [Spider Mech Boots «Octo Arms»]
+[06Nov2026 15:29:07.357] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [OctoTester: Replaced a slot on OctoTester with [Diamond Mech Chestplate «Vanguard»]]
+[06Nov2026 15:29:07.357] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Replaced a slot on OctoTester with [Diamond Mech Chestplate «Vanguard»]
+[06Nov2026 15:29:57.956] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [OctoTester: Replaced a slot on OctoTester with [Spider Mech Chestplate «Octo Arms»]]
+[06Nov2026 15:29:57.958] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Replaced a slot on OctoTester with [Spider Mech Chestplate «Octo Arms»]
