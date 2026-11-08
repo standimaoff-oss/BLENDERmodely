@@ -314,6 +314,25 @@ class Model:
             kw["origin"] = [origin[0], origin[1], -origin[2]]
         return self.cube(name, nf, nt, parent=parent, **kw)
 
+    def settle(self, floor=0.0):
+        """shift the whole model vertically so its lowest point rests on `floor`."""
+        lo = min(min(e["from"][1], e["to"][1]) for e in self.elements)
+        dy = float(floor) - lo
+        if abs(dy) < 1e-9:
+            return self
+        for e in self.elements:
+            e["from"][1] += dy
+            e["to"][1] += dy
+            e["origin"][1] += dy
+
+        def walk(nodes):
+            for n in nodes:
+                if isinstance(n, dict):
+                    n["origin"][1] += dy
+                    walk(n.get("children", []))
+        walk(self.outliner)
+        return self
+
     # -- output ----------------------------------------------------------
     def save(self, path_bbmodel, path_png=None, extra_meta=None):
         png = self.atlas.png_bytes()

@@ -103,7 +103,7 @@ def face(f):
 
 m.cube("skull", (4.2, 10.0, -3.0), (8.2, 14.4, 3.0), parent=head, base=ASH,
        uv_scale=(2, 2), paint=face)
-m.cube("brow", (4.6, 14.4, -2.4), (7.8, 15.4, 2.4), parent=head, base=ASH_L,
+m.cube("brow", (4.6, 14.15, -2.4), (7.8, 15.5, 2.4), parent=head, base=ASH_L,
        paint=lambda f: body_fur(f, 31, ASH_L))
 
 # antennae: two slender hinged rods sweeping up and forward
@@ -122,7 +122,7 @@ for side in (1, -1):
     t = "r" if side > 0 else "l"
     for i, x0 in enumerate((2.2, -1.0)):
         za, zb = sorted((side * 1.2, side * 2.4))
-        m.cube("leg%d_%s" % (i, t), (x0, 0.4, za), (x0 + 1.2, 8.6, zb), parent=body,
+        m.cube("leg%d_%s" % (i, t), (x0, 2.2, za), (x0 + 1.2, 8.6, zb), parent=body,
                base=ASH_D, origin=(x0 + 0.6, 8.4, side * 1.8), rot=(10 * side, 0, 0),
                paint=lambda f: body_fur(f, 50 + i, ASH_D))
 
@@ -136,23 +136,25 @@ def build_wings(side):
     cy = 13.4                                 # forewing chord centre
 
     fg = m.group("fore_%s" % tag, parent=wings, origin=(0.6, cy, s * zr),
-                 rot=(-47 * s, 0, 0))
-    FSEG = ((0.0, 4.8, 6.4, 5.6), (4.6, 8.6, 5.6, 5.6), (8.4, 11.8, 4.8, 5.6))
+                 rot=(-40 * s, 0, 0))
+    FSEG = ((0.0, 4.9, 6.4, 5.6), (4.5, 8.8, 5.6, 5.6), (8.4, 11.9, 4.8, 5.6))
+    XS = ((-2.40, -1.02), (-2.46, -0.96), (-2.36, -1.06))
     for i, (z0, z1, c0, c1) in enumerate(FSEG):
         a, b = sorted((s * (zr + z0), s * (zr + z1)))
-        m.cube("fore%d_%s" % (i, tag), (-2.4, cy - c0, a), (-1.0, cy + c1, b),
+        m.cube("fore%d_%s" % (i, tag), (XS[i][0], cy - c0, a), (XS[i][1], cy + c1, b),
                parent=fg, base=ASH, paint=lambda f, i=i: wing(f, 60 + i))
     a, b = sorted((s * (zr + 11.6), s * (zr + 16.4)))
-    m.cube("foretip_%s" % tag, (-2.4, cy - 4.0, a), (-1.0, cy + 5.6, b), parent=fg,
+    m.cube("foretip_%s" % tag, (-2.43, cy - 4.0, a), (-0.99, cy + 5.6, b), parent=fg,
            base=EMBER, paint=lambda f: ember_wing(f, 61))
     a, b = sorted((s * (zr + 10.4), s * (zr + 11.8)))
-    m.cube("foreheat_%s" % tag, (-2.4, cy - 4.2, a), (-1.0, cy + 5.6, b), parent=fg,
+    m.cube("foreheat_%s" % tag, (-2.38, cy - 4.2, a), (-1.04, cy + 5.6, b), parent=fg,
            base=EMBER, paint=lambda f: ember_wing(f, 62, mix(EMBER, ASH, 0.5)))
 
     hy = 12.2
-    hg = m.group("hind_%s" % tag, parent=wings, origin=(-2.4, hy, s * zr),
-                 rot=(24 * s, 0, 0))
-    HSEG = ((0.0, 5.2, 6.6, 6.0), (5.0, 9.8, 5.8, 6.0), (9.6, 13.2, 5.0, 6.0))
+    hg = m.group("hind_%s" % tag, parent=wings, origin=(-2.4, hy + 1.2, s * zr),
+                 rot=(13 * s, 0, 0))
+    HSEG = ((0.0, 5.3, 6.6, 6.0), (4.9, 9.9, 5.8, 6.0), (9.5, 13.2, 5.0, 6.0))
+    HX = ((-2.40, -1.02), (-2.46, -0.96), (-2.36, -1.06))
 
     def eyespot(f):
         wing(f, 81)
@@ -164,7 +166,7 @@ def build_wings(side):
     for i, (z0, z1, c0, c1) in enumerate(HSEG):
         a, b = sorted((s * (zr + z0), s * (zr + z1)))
         paint = eyespot if i == 1 else (lambda f, i=i: wing(f, 80 + i))
-        m.cube("hind%d_%s" % (i, tag), (-2.4, hy - c0, a), (-1.0, hy + c1, b),
+        m.cube("hind%d_%s" % (i, tag), (HX[i][0], hy - c0, a), (HX[i][1], hy + c1, b),
                parent=hg, base=ASH, paint=paint)
 
 
@@ -174,6 +176,7 @@ build_wings(-1)
 # ---------------------------------------------------------------- save -----
 for d in ("models", "textures", "previews"):
     os.makedirs(os.path.join(ROOT, d), exist_ok=True)
-bb = m.save(os.path.join(ROOT, "models", NAME + ".bbmodel"),
+m.settle()
+m.save(os.path.join(ROOT, "models", NAME + ".bbmodel"),
             os.path.join(ROOT, "textures", NAME + ".png"))
-print("wrote", bb, "elements:", len(m.elements))
+print("wrote", NAME, "elements:", len(m.elements))
